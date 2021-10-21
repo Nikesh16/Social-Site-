@@ -16,4 +16,6 @@
 <h3> Сравнительный анализ аналогов </h3>
 <h3>Вывод </h3>
 
-
+[Facebook](https://www.facebook.com/)
+[Vk](https://www.vk.com/)
+[Twitter](https://www.twitter.com/)
