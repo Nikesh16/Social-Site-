@@ -29,13 +29,13 @@
 
 <b>[Twitter](https://www.twitter.com/)</b> 
 - Твиттер построен на публикации коротких 280-символьных «твитов» или постов.
-Он не содержит многих функций, которые есть у Vk и Facebook. Он также не содержит генератора резюме, как на указанных выше сайтах
+Он не содержит многих функций, например: канал групп, эффективная среда разработки игр которые есть у Vk и Facebook. Он также не содержит генератора резюме, как на указанных выше сайтах
 
 <br>
 
 <h3> Сравнительный анализ аналогов </h3>
 <div align="center">
-<img width="50%" height = "340px" src="https://github.com/Nikesh16/Social-Site-/blob/59902e81b357eb148aff461f85c7b59d30097476/Pictures/Comparison%20Table.png" alt="cover" />
+<img width="50%" height = "370px" src="https://github.com/Nikesh16/Social-Site-/blob/59902e81b357eb148aff461f85c7b59d30097476/Pictures/Comparison%20Table.png" alt="cover" />
 </div>
 <h3>Вывод </h3>
 Наши сайты после сравнения будут иметь следующие вещи: <br>
