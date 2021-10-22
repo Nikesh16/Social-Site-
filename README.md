@@ -35,7 +35,7 @@
 
 <h3> Сравнительный анализ аналогов </h3>
 <div align="center">
-<img width="100%" height = "250px" src="https://github.com/Nikesh16/Social-Site-/blob/2439923021d59c9f5e6eaaac72f7c23fa7f42dc8/__%E2%9C%A8Social_Site%E2%9C%A8.png" alt="cover" />
+<img width="100%" height = "250px" src="https://github.com/Nikesh16/Social-Site-/blob/59902e81b357eb148aff461f85c7b59d30097476/Pictures/Comparison%20Table.png" alt="cover" />
 </div>
 <h3>Вывод </h3>
 
