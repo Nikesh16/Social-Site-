@@ -31,6 +31,8 @@
   <div align="center">
 <img width="500px;" height = "600px" src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/UseCaseDiagram.png" alt="cover" />
 </div>
+
+<h2>Use case specifications</h2>
 <table>
   <tr>
     <td>Use Case</td>
