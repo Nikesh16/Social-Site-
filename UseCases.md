@@ -1,6 +1,6 @@
 <h2>List of actors </h2>
   1.Administration <br> 
-  - Delete the user in case of violation of our <a>site rules</a> <br>
+  - Delete the user in case of violation of our [site rules](#) <br>
   - Check the posts/comments <br>
   - View/delete the messages <br>
   - View/Delete the About section <br>
