@@ -1,6 +1,10 @@
 <h2>List of actors </h2>
   1.Administration <br> 
-  - Delete the user in case of violation of our [site rule](https://github.com/nikesh16) <br>
+  - Delete the user in case of violation of our   
+  <a href="example.html" onclick="window.open('example.html', '_self');"> site rules
+
+</a>
+<br>
   - Check the posts/comments <br>
   - View/delete the messages <br>
   - View/Delete the About section <br>
