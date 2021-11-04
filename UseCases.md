@@ -20,11 +20,13 @@
   -Update profile and cover images <br>
   -Post images/text <br>
   -Follow users <br>
-  -Send messages (message format: text/picture)to other users <br>
+  -Send messages (message format: text/picture) <br>
   -View timeline <br>
   -Change setting/about <br>
   -Generate Web portfolio <br>
   -Check notification bar <br>
+  -Add/edit/delete comments <br>
+  -View profile/timeline of following account <br>
   
   
   
