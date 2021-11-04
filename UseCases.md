@@ -60,6 +60,359 @@
   <td>Postconditions</td>
     <td>Under successful registration, the guest no longer remains guest but becomes our user whose registration details will be saved in our database</td>
 </tr>
+ </table>
+  ---- will edit this-----
+  <table>
+  <tr>
+    <td>Use Case</td>
+     <td colspan="2">Login</td> 
+    </tr>
+  <tr>
+  <td> Short Description</td>
+    <td> Newly registered users/guests enter their email</td>
+</tr>
+  <tr>
+  <td> Characters</td>
+    <td>Guests/Users </td>
+</tr>
+   <tr>
+  <td> Preconditions</td>
+    <td>Guests/Users who want to login to our system</td>
+</tr>
+    <tr>
+  <td> Main stream</td>
+    <td>THe login new Case consists of a form which includes email and password with login buttom. The guest redirects to their profile page under successful login attempt.  Guest need to fill up the form which includes first name, last name, email, Password and confirm password. Under successful registration, the<b> Registration</b> case ends and the guest is redirected to login page</td>
+</tr>
+    <tr>
+  <td> Alternate streams</td>
+    <td> Guest who uses long character first and last name, invalid email format and invalid password length  will be redirected to the same page with error message.</td>
+</tr>
+    <tr>
+  <td>Postconditions</td>
+    <td>Under successful registration, the guest no longer remains guest but becomes our user whose registration details will be saved in our database</td>
+</tr>
+ </table>
+ 
+ ---- will edit this-----
+  <table>
+  <tr>
+    <td>Use Case</td>
+     <td colspan="2">Registration</td> 
+    </tr>
+  <tr>
+  <td> Short Description</td>
+    <td> New users open their account to use our inside functionalities</td>
+</tr>
+  <tr>
+  <td> Characters</td>
+    <td> Guests</td>
+</tr>
+   <tr>
+  <td> Preconditions</td>
+    <td>Guests who want to register account in our site</td>
+</tr>
+    <tr>
+  <td> Main stream</td>
+    <td> Guest need to fill up the form which includes first name, last name, email, Password and confirm password. Under successful registration, the<b> Registration</b> case ends and the guest is redirected to login page</td>
+</tr>
+    <tr>
+  <td> Alternate streams</td>
+    <td> Guest who uses long character first and last name, invalid email format and invalid password length  will be redirected to the same page with error message.</td>
+</tr>
+    <tr>
+  <td>Postconditions</td>
+    <td>Under successful registration, the guest no longer remains guest but becomes our user whose registration details will be saved in our database</td>
+</tr>
+ </table>
+ 
+ ---- will edit this-----
+  <table>
+  <tr>
+    <td>Use Case</td>
+     <td colspan="2">Registration</td> 
+    </tr>
+  <tr>
+  <td> Short Description</td>
+    <td> New users open their account to use our inside functionalities</td>
+</tr>
+  <tr>
+  <td> Characters</td>
+    <td> Guests</td>
+</tr>
+   <tr>
+  <td> Preconditions</td>
+    <td>Guests who want to register account in our site</td>
+</tr>
+    <tr>
+  <td> Main stream</td>
+    <td> Guest need to fill up the form which includes first name, last name, email, Password and confirm password. Under successful registration, the<b> Registration</b> case ends and the guest is redirected to login page</td>
+</tr>
+    <tr>
+  <td> Alternate streams</td>
+    <td> Guest who uses long character first and last name, invalid email format and invalid password length  will be redirected to the same page with error message.</td>
+</tr>
+    <tr>
+  <td>Postconditions</td>
+    <td>Under successful registration, the guest no longer remains guest but becomes our user whose registration details will be saved in our database</td>
+</tr>
+ </table>
+ 
+ ---- will edit this-----
+  <table>
+  <tr>
+    <td>Use Case</td>
+     <td colspan="2">Registration</td> 
+    </tr>
+  <tr>
+  <td> Short Description</td>
+    <td> New users open their account to use our inside functionalities</td>
+</tr>
+  <tr>
+  <td> Characters</td>
+    <td> Guests</td>
+</tr>
+   <tr>
+  <td> Preconditions</td>
+    <td>Guests who want to register account in our site</td>
+</tr>
+    <tr>
+  <td> Main stream</td>
+    <td> Guest need to fill up the form which includes first name, last name, email, Password and confirm password. Under successful registration, the<b> Registration</b> case ends and the guest is redirected to login page</td>
+</tr>
+    <tr>
+  <td> Alternate streams</td>
+    <td> Guest who uses long character first and last name, invalid email format and invalid password length  will be redirected to the same page with error message.</td>
+</tr>
+    <tr>
+  <td>Postconditions</td>
+    <td>Under successful registration, the guest no longer remains guest but becomes our user whose registration details will be saved in our database</td>
+</tr>
+ </table>
+ 
+ ---- will edit this-----
+  <table>
+  <tr>
+    <td>Use Case</td>
+     <td colspan="2">Registration</td> 
+    </tr>
+  <tr>
+  <td> Short Description</td>
+    <td> New users open their account to use our inside functionalities</td>
+</tr>
+  <tr>
+  <td> Characters</td>
+    <td> Guests</td>
+</tr>
+   <tr>
+  <td> Preconditions</td>
+    <td>Guests who want to register account in our site</td>
+</tr>
+    <tr>
+  <td> Main stream</td>
+    <td> Guest need to fill up the form which includes first name, last name, email, Password and confirm password. Under successful registration, the<b> Registration</b> case ends and the guest is redirected to login page</td>
+</tr>
+    <tr>
+  <td> Alternate streams</td>
+    <td> Guest who uses long character first and last name, invalid email format and invalid password length  will be redirected to the same page with error message.</td>
+</tr>
+    <tr>
+  <td>Postconditions</td>
+    <td>Under successful registration, the guest no longer remains guest but becomes our user whose registration details will be saved in our database</td>
+</tr>
+ </table>
+ 
+ ---- will edit this-----
+  <table>
+  <tr>
+    <td>Use Case</td>
+     <td colspan="2">Registration</td> 
+    </tr>
+  <tr>
+  <td> Short Description</td>
+    <td> New users open their account to use our inside functionalities</td>
+</tr>
+  <tr>
+  <td> Characters</td>
+    <td> Guests</td>
+</tr>
+   <tr>
+  <td> Preconditions</td>
+    <td>Guests who want to register account in our site</td>
+</tr>
+    <tr>
+  <td> Main stream</td>
+    <td> Guest need to fill up the form which includes first name, last name, email, Password and confirm password. Under successful registration, the<b> Registration</b> case ends and the guest is redirected to login page</td>
+</tr>
+    <tr>
+  <td> Alternate streams</td>
+    <td> Guest who uses long character first and last name, invalid email format and invalid password length  will be redirected to the same page with error message.</td>
+</tr>
+    <tr>
+  <td>Postconditions</td>
+    <td>Under successful registration, the guest no longer remains guest but becomes our user whose registration details will be saved in our database</td>
+</tr>
+ </table>
+ 
+ ---- will edit this-----
+  <table>
+  <tr>
+    <td>Use Case</td>
+     <td colspan="2">Registration</td> 
+    </tr>
+  <tr>
+  <td> Short Description</td>
+    <td> New users open their account to use our inside functionalities</td>
+</tr>
+  <tr>
+  <td> Characters</td>
+    <td> Guests</td>
+</tr>
+   <tr>
+  <td> Preconditions</td>
+    <td>Guests who want to register account in our site</td>
+</tr>
+    <tr>
+  <td> Main stream</td>
+    <td> Guest need to fill up the form which includes first name, last name, email, Password and confirm password. Under successful registration, the<b> Registration</b> case ends and the guest is redirected to login page</td>
+</tr>
+    <tr>
+  <td> Alternate streams</td>
+    <td> Guest who uses long character first and last name, invalid email format and invalid password length  will be redirected to the same page with error message.</td>
+</tr>
+    <tr>
+  <td>Postconditions</td>
+    <td>Under successful registration, the guest no longer remains guest but becomes our user whose registration details will be saved in our database</td>
+</tr>
+ </table>
+ 
+ ---- will edit this-----
+  <table>
+  <tr>
+    <td>Use Case</td>
+     <td colspan="2">Registration</td> 
+    </tr>
+  <tr>
+  <td> Short Description</td>
+    <td> New users open their account to use our inside functionalities</td>
+</tr>
+  <tr>
+  <td> Characters</td>
+    <td> Guests</td>
+</tr>
+   <tr>
+  <td> Preconditions</td>
+    <td>Guests who want to register account in our site</td>
+</tr>
+    <tr>
+  <td> Main stream</td>
+    <td> Guest need to fill up the form which includes first name, last name, email, Password and confirm password. Under successful registration, the<b> Registration</b> case ends and the guest is redirected to login page</td>
+</tr>
+    <tr>
+  <td> Alternate streams</td>
+    <td> Guest who uses long character first and last name, invalid email format and invalid password length  will be redirected to the same page with error message.</td>
+</tr>
+    <tr>
+  <td>Postconditions</td>
+    <td>Under successful registration, the guest no longer remains guest but becomes our user whose registration details will be saved in our database</td>
+</tr>
+ </table>
+ 
+ ---- will edit this-----
+  <table>
+  <tr>
+    <td>Use Case</td>
+     <td colspan="2">Registration</td> 
+    </tr>
+  <tr>
+  <td> Short Description</td>
+    <td> New users open their account to use our inside functionalities</td>
+</tr>
+  <tr>
+  <td> Characters</td>
+    <td> Guests</td>
+</tr>
+   <tr>
+  <td> Preconditions</td>
+    <td>Guests who want to register account in our site</td>
+</tr>
+    <tr>
+  <td> Main stream</td>
+    <td> Guest need to fill up the form which includes first name, last name, email, Password and confirm password. Under successful registration, the<b> Registration</b> case ends and the guest is redirected to login page</td>
+</tr>
+    <tr>
+  <td> Alternate streams</td>
+    <td> Guest who uses long character first and last name, invalid email format and invalid password length  will be redirected to the same page with error message.</td>
+</tr>
+    <tr>
+  <td>Postconditions</td>
+    <td>Under successful registration, the guest no longer remains guest but becomes our user whose registration details will be saved in our database</td>
+</tr>
+ </table>
+ 
+ ---- will edit this-----
+  <table>
+  <tr>
+    <td>Use Case</td>
+     <td colspan="2">Registration</td> 
+    </tr>
+  <tr>
+  <td> Short Description</td>
+    <td> New users open their account to use our inside functionalities</td>
+</tr>
+  <tr>
+  <td> Characters</td>
+    <td> Guests</td>
+</tr>
+   <tr>
+  <td> Preconditions</td>
+    <td>Guests who want to register account in our site</td>
+</tr>
+    <tr>
+  <td> Main stream</td>
+    <td> Guest need to fill up the form which includes first name, last name, email, Password and confirm password. Under successful registration, the<b> Registration</b> case ends and the guest is redirected to login page</td>
+</tr>
+    <tr>
+  <td> Alternate streams</td>
+    <td> Guest who uses long character first and last name, invalid email format and invalid password length  will be redirected to the same page with error message.</td>
+</tr>
+    <tr>
+  <td>Postconditions</td>
+    <td>Under successful registration, the guest no longer remains guest but becomes our user whose registration details will be saved in our database</td>
+</tr>
+ </table>
+ 
+ ---- will edit this-----
+  <table>
+  <tr>
+    <td>Use Case</td>
+     <td colspan="2">Registration</td> 
+    </tr>
+  <tr>
+  <td> Short Description</td>
+    <td> New users open their account to use our inside functionalities</td>
+</tr>
+  <tr>
+  <td> Characters</td>
+    <td> Guests</td>
+</tr>
+   <tr>
+  <td> Preconditions</td>
+    <td>Guests who want to register account in our site</td>
+</tr>
+    <tr>
+  <td> Main stream</td>
+    <td> Guest need to fill up the form which includes first name, last name, email, Password and confirm password. Under successful registration, the<b> Registration</b> case ends and the guest is redirected to login page</td>
+</tr>
+    <tr>
+  <td> Alternate streams</td>
+    <td> Guest who uses long character first and last name, invalid email format and invalid password length  will be redirected to the same page with error message.</td>
+</tr>
+    <tr>
+  <td>Postconditions</td>
+    <td>Under successful registration, the guest no longer remains guest but becomes our user whose registration details will be saved in our database</td>
+</tr>
+ </table>
+  
   
 
 
