@@ -1,7 +1,7 @@
 <h2>List of actors </h2>
   1.Administration <br> 
   - Delete the user in case of violation of our   
-  <a href="example.html" onclick="window.open('example.html', '_self');"> site rules
+  <a href="https://github.com/Nikesh16/Social-Site-/blob/main/siteRules" onclick="window.open('example.html', '_self');"> site rules
 
 </a>
 <br>
