@@ -63,7 +63,7 @@
 </tr>
  </table>
  <div align="center">
-<img width="500px;" height = "600px" src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/UseCaseDiagram2.png" alt="cover" />
+<img width="800px;" height = "50px" src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/%E2%80%94Pngtree%E2%80%94black%20straight%20thin%20line_5487836.png" alt="cover" />
 </div>
   <table>
   <tr>
@@ -95,6 +95,10 @@
     <td>Under successful registration, the guest no longer remains guest but becomes our user whose registration details will be saved in our database</td>
 </tr>
  </table>
+<div align="center">
+<img width="800px;" height = "50px" src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/%E2%80%94Pngtree%E2%80%94black%20straight%20thin%20line_5487836.png" alt="cover" />
+</div>
+ 
  
   <table>
   <tr>
@@ -126,7 +130,9 @@
     <td>After saving, the About section will be updated using setting </td>
 </tr>
  </table>
- 
+ <div align="center">
+<img width="800px;" height = "50px" src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/%E2%80%94Pngtree%E2%80%94black%20straight%20thin%20line_5487836.png" alt="cover" />
+</div>
 
   <table>
   <tr>
@@ -158,7 +164,9 @@
     <td>Under successful attemp, the user redirects to their profile page where they can see the changes they made.</td>
 </tr>
  </table>
- 
+ <div align="center">
+<img width="800px;" height = "50px" src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/%E2%80%94Pngtree%E2%80%94black%20straight%20thin%20line_5487836.png" alt="cover" />
+</div>
   <table>
   <tr>
     <td>Use Case</td>
@@ -189,7 +197,9 @@
     <td>The users can click send option, the message delivers to the concerned user and he/she can reply the message. Admin uses mailing system to mail the clients.</td>
 </tr>
  </table>
- 
+ <div align="center">
+<img width="800px;" height = "50px" src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/%E2%80%94Pngtree%E2%80%94black%20straight%20thin%20line_5487836.png" alt="cover" />
+</div>
 
   <table>
   <tr>
@@ -221,7 +231,9 @@
     <td>After the user follow him/her,  he/she can be able to view the activities such as change of photos and posts. </td>
 </tr>
  </table>
- 
+ <div align="center">
+<img width="800px;" height = "50px" src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/%E2%80%94Pngtree%E2%80%94black%20straight%20thin%20line_5487836.png" alt="cover" />
+</div>
   <table>
   <tr>
     <td>Use Case</td>
@@ -254,7 +266,9 @@
  </table>
  
 
-
+<div align="center">
+<img width="800px;" height = "50px" src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/%E2%80%94Pngtree%E2%80%94black%20straight%20thin%20line_5487836.png" alt="cover" />
+</div>
   <table>
   <tr>
     <td>Use Case</td>
@@ -285,7 +299,9 @@
     <td>After clicking post buttom, the pictures/posts posted by the users will appear on the same page</td>
 </tr>
  </table>
- 
+ <div align="center">
+<img width="800px;" height = "50px" src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/%E2%80%94Pngtree%E2%80%94black%20straight%20thin%20line_5487836.png" alt="cover" />
+</div>
 
   <table>
   <tr>
@@ -319,7 +335,9 @@
 </tr>
  </table>
  
- 
+ <div align="center">
+<img width="800px;" height = "50px" src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/%E2%80%94Pngtree%E2%80%94black%20straight%20thin%20line_5487836.png" alt="cover" />
+</div>
   <table>
   <tr>
     <td>Use Case</td>
@@ -350,7 +368,9 @@
     <td>The deleted post no longer appears on the user's profile page. </td>
 </tr>
  </table>
- 
+ <div align="center">
+<img width="800px;" height = "50px" src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/%E2%80%94Pngtree%E2%80%94black%20straight%20thin%20line_5487836.png" alt="cover" />
+</div>
   <table>
   <tr>
     <td>Use Case</td>
@@ -382,7 +402,9 @@
 </tr>
  </table>
   
-  
+  <div align="center">
+<img width="800px;" height = "50px" src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/%E2%80%94Pngtree%E2%80%94black%20straight%20thin%20line_5487836.png" alt="cover" />
+</div>
    
   <table>
   <tr>
