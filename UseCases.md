@@ -63,7 +63,7 @@
     <td>Under successful registration, the guest no longer remains guest but becomes our user whose registration details will be saved in our database</td>
 </tr>
  </table>
-  ---- will edit this-----
+
   <table>
   <tr>
     <td>Use Case</td>
@@ -126,7 +126,7 @@
 </tr>
  </table>
  
- ---- will edit this-----
+
   <table>
   <tr>
     <td>Use Case</td>
@@ -285,7 +285,7 @@
 </tr>
  </table>
  
- ---- will edit this-----
+
   <table>
   <tr>
     <td>Use Case</td>
