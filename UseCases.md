@@ -62,7 +62,9 @@
     <td>Under successful registration, the guest no longer remains guest but becomes our user whose registration details will be saved in our database</td>
 </tr>
  </table>
-
+ <div align="center">
+<img width="500px;" height = "600px" src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/UseCaseDiagram2.png" alt="cover" />
+</div>
   <table>
   <tr>
     <td>Use Case</td>
