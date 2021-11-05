@@ -209,19 +209,18 @@
 </tr>
     <tr>
   <td> Main stream</td>
-      <td> The follow option </tr>
+      <td> The follow option lie on the timeline section where user can check the number of followers. The number of follower increases as soon as you or someone else start following. </tr>
 </tr>
     <tr>
   <td> Alternate streams</td>
-    <td> Guest who uses long character first and last name, invalid email format and invalid password length  will be redirected to the same page with error message.</td>
+    <td> none</td>
 </tr>
     <tr>
   <td>Postconditions</td>
-    <td>Under successful registration, the guest no longer remains guest but becomes our user whose registration details will be saved in our database</td>
+    <td>After the user follow him/her,  he/she can be able to view the activities such as change of photos and posts. </td>
 </tr>
  </table>
  
- ---- will edit this-----
   <table>
   <tr>
     <td>Use Case</td>
@@ -229,31 +228,32 @@
     </tr>
   <tr>
   <td> Short Description</td>
-    <td> New users open their account to use our inside functionalities</td>
+    <td> User can view their own timeline as well as the timeline of other registered users</td>
 </tr>
   <tr>
   <td> Characters</td>
-    <td> Guests</td>
+    <td> Users</td>
 </tr>
    <tr>
   <td> Preconditions</td>
-    <td>Guests who want to register account in our site</td>
+    <td> Users who want to view registered users timeline</td>
 </tr>
     <tr>
   <td> Main stream</td>
-    <td> Guest need to fill up the form which includes first name, last name, email, Password and confirm password. Under successful registration, the<b> Registration</b> case ends and the guest is redirected to login page</td>
+    <td>Users can click on the name of other registered users which redirects them to their timeline.</td>
 </tr>
     <tr>
   <td> Alternate streams</td>
-    <td> Guest who uses long character first and last name, invalid email format and invalid password length  will be redirected to the same page with error message.</td>
+    <td> None</td>
 </tr>
     <tr>
   <td>Postconditions</td>
-    <td>Under successful registration, the guest no longer remains guest but becomes our user whose registration details will be saved in our database</td>
+    <td>The user redirects to other registered users timeline where they can check their activities.</td>
 </tr>
  </table>
  
- ---- will edit this-----
+
+
   <table>
   <tr>
     <td>Use Case</td>
@@ -261,59 +261,27 @@
     </tr>
   <tr>
   <td> Short Description</td>
-    <td> New users open their account to use our inside functionalities</td>
+    <td> Function which allows to post images/photos</td>
 </tr>
   <tr>
   <td> Characters</td>
-    <td> Guests</td>
+    <td> Users</td>
 </tr>
    <tr>
   <td> Preconditions</td>
-    <td>Guests who want to register account in our site</td>
+    <td>Users who want to share their thoughts and daily activities on their timeline. </td>
 </tr>
     <tr>
   <td> Main stream</td>
-    <td> Guest need to fill up the form which includes first name, last name, email, Password and confirm password. Under successful registration, the<b> Registration</b> case ends and the guest is redirected to login page</td>
+    <td> After loggin in to our system, the profile page consists of textbar and upload section where they can type post and post in the system </td>
 </tr>
     <tr>
   <td> Alternate streams</td>
-    <td> Guest who uses long character first and last name, invalid email format and invalid password length  will be redirected to the same page with error message.</td>
+    <td> None </td>
 </tr>
     <tr>
   <td>Postconditions</td>
-    <td>Under successful registration, the guest no longer remains guest but becomes our user whose registration details will be saved in our database</td>
-</tr>
- </table>
- 
- ---- will edit this-----
-  <table>
-  <tr>
-    <td>Use Case</td>
-     <td colspan="2">Change About</td> 
-    </tr>
-  <tr>
-  <td> Short Description</td>
-    <td> New users open their account to use our inside functionalities</td>
-</tr>
-  <tr>
-  <td> Characters</td>
-    <td> Guests</td>
-</tr>
-   <tr>
-  <td> Preconditions</td>
-    <td>Guests who want to register account in our site</td>
-</tr>
-    <tr>
-  <td> Main stream</td>
-    <td> Guest need to fill up the form which includes first name, last name, email, Password and confirm password. Under successful registration, the<b> Registration</b> case ends and the guest is redirected to login page</td>
-</tr>
-    <tr>
-  <td> Alternate streams</td>
-    <td> Guest who uses long character first and last name, invalid email format and invalid password length  will be redirected to the same page with error message.</td>
-</tr>
-    <tr>
-  <td>Postconditions</td>
-    <td>Under successful registration, the guest no longer remains guest but becomes our user whose registration details will be saved in our database</td>
+    <td>After clicking post buttom, the pictures/posts posted by the users will appear on the same page</td>
 </tr>
  </table>
  
@@ -325,31 +293,32 @@
     </tr>
   <tr>
   <td> Short Description</td>
-    <td> New users open their account to use our inside functionalities</td>
+    <td> Generate Web Portfolio is completely new functionality which none of the social medias has used till date. In this modern era, nobody wants to carry a Resume paper and apply for job. They like to show their web portfolio. So, our site is the best place where you can generate the web portfolio. Note that, we donot save the user's information in our database because we respect user's privacy.
+    </td>
 </tr>
   <tr>
   <td> Characters</td>
-    <td> Guests</td>
+    <td> Users</td>
 </tr>
    <tr>
   <td> Preconditions</td>
-    <td>Guests who want to register account in our site</td>
+    <td>Users who want to generate their web portfolio</td>
 </tr>
     <tr>
   <td> Main stream</td>
-    <td> Guest need to fill up the form which includes first name, last name, email, Password and confirm password. Under successful registration, the<b> Registration</b> case ends and the guest is redirected to login page</td>
+    <td>  User's need to fill up the forms and go further. The system will automatically generate the beautiful web portfolio.</td>
 </tr>
     <tr>
   <td> Alternate streams</td>
-    <td> Guest who uses long character first and last name, invalid email format and invalid password length  will be redirected to the same page with error message.</td>
+    <td> The forms consists of email, school , university and many more. Under valid or successful attempt, user can move further and generate their portfolio else the error messages pops up.</td>
 </tr>
     <tr>
   <td>Postconditions</td>
-    <td>Under successful registration, the guest no longer remains guest but becomes our user whose registration details will be saved in our database</td>
+    <td>The successful entry of the form leads them to beautiful automatically generated web portfolio</td>
 </tr>
  </table>
  
- ---- will edit this-----
+ 
   <table>
   <tr>
     <td>Use Case</td>
@@ -357,31 +326,30 @@
     </tr>
   <tr>
   <td> Short Description</td>
-    <td> New users open their account to use our inside functionalities</td>
+    <td> The funciton allows users to make changes in their comments/post  </td>
 </tr>
   <tr>
   <td> Characters</td>
-    <td> Guests</td>
+    <td> Users</td>
 </tr>
    <tr>
   <td> Preconditions</td>
-    <td>Guests who want to register account in our site</td>
+    <td>Users who wants to edit/delete posts and comments</td>
 </tr>
     <tr>
   <td> Main stream</td>
-    <td> Guest need to fill up the form which includes first name, last name, email, Password and confirm password. Under successful registration, the<b> Registration</b> case ends and the guest is redirected to login page</td>
+    <td> Users are allowed to edit as well as delete their comments. They can also delete their post.</td>
 </tr>
     <tr>
   <td> Alternate streams</td>
-    <td> Guest who uses long character first and last name, invalid email format and invalid password length  will be redirected to the same page with error message.</td>
+    <td> None</td>
 </tr>
     <tr>
   <td>Postconditions</td>
-    <td>Under successful registration, the guest no longer remains guest but becomes our user whose registration details will be saved in our database</td>
+    <td>The deleted post no longer appears on the user's profile page. </td>
 </tr>
  </table>
  
- ---- will edit this-----
   <table>
   <tr>
     <td>Use Case</td>
@@ -389,27 +357,27 @@
     </tr>
   <tr>
   <td> Short Description</td>
-    <td> New users open their account to use our inside functionalities</td>
+    <td> Notification bar notifies user about the activities that other users did on their profile. For example: Like,comment and many more</td>
 </tr>
   <tr>
   <td> Characters</td>
-    <td> Guests</td>
+    <td> Users</td>
 </tr>
    <tr>
   <td> Preconditions</td>
-    <td>Guests who want to register account in our site</td>
+    <td>None</td>
 </tr>
     <tr>
   <td> Main stream</td>
-    <td> Guest need to fill up the form which includes first name, last name, email, Password and confirm password. Under successful registration, the<b> Registration</b> case ends and the guest is redirected to login page</td>
+    <td> The notification bar allows user to check the recent activities. </td>
 </tr>
     <tr>
   <td> Alternate streams</td>
-    <td> Guest who uses long character first and last name, invalid email format and invalid password length  will be redirected to the same page with error message.</td>
+    <td> none</td>
 </tr>
     <tr>
   <td>Postconditions</td>
-    <td>Under successful registration, the guest no longer remains guest but becomes our user whose registration details will be saved in our database</td>
+    <td>After clicking the notification option, the user can check activities of other users on their profile.</td>
 </tr>
  </table>
   
