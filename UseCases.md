@@ -28,7 +28,7 @@
   -View profile/timeline of following account <br>
  <h2>UseCase Diagram(UML diagram)</h2> 
   <div align="center">
-<img width="500px;" height = "600px" src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/UseCaseDiagram.png" alt="cover" />
+<img width="500px;" height = "600px" src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/UseCaseDiagram2.png" alt="cover" />
 </div>
 
 <h2>Use case specifications</h2>
@@ -168,15 +168,15 @@
 </tr>
   <tr>
   <td> Characters</td>
-    <td> Users</td>
+    <td> Users/Admin</td>
 </tr>
    <tr>
   <td> Preconditions</td>
-    <td>Users who want to send messages to other registered users in the system</td>
+    <td>Users/admin who want to send messages to  registered users in the system</td>
 </tr>
     <tr>
   <td> Main stream</td>
-    <td> Users have a different messaging option where they can type messages(message type: photo/text) and send it to other</td>
+    <td> Users have a different messaging option where they can type messages(message type: photo/text) and send it to other. Admins can send mails to their users.</td>
 </tr>
     <tr>
   <td> Alternate streams</td>
@@ -184,7 +184,7 @@
 </tr>
     <tr>
   <td>Postconditions</td>
-    <td>After clicking send option, the message delivers to the concerned user and he/she can reply the message</td>
+    <td>The users can click send option, the message delivers to the concerned user and he/she can reply the message. Admin uses mailing system to mail the clients.</td>
 </tr>
  </table>
  
@@ -352,7 +352,7 @@
   <table>
   <tr>
     <td>Use Case</td>
-     <td colspan="2">Check Notification bar</td> 
+     <td colspan="2">Notification bar</td> 
     </tr>
   <tr>
   <td> Short Description</td>
@@ -377,6 +377,39 @@
     <tr>
   <td>Postconditions</td>
     <td>After clicking the notification option, the user can check activities of other users on their profile.</td>
+</tr>
+ </table>
+  
+  
+   
+  <table>
+  <tr>
+    <td>Use Case</td>
+     <td colspan="2">Delete Profile</td> 
+    </tr>
+  <tr>
+  <td> Short Description</td>
+    <td> Notification bar notifies user about the activities that other users did on their profile. For example: Like,comment and many more</td>
+</tr>
+  <tr>
+  <td> Characters</td>
+    <td>Admin </td>
+</tr>
+   <tr>
+  <td> Preconditions</td>
+    <td>None</td>
+</tr>
+    <tr>
+  <td> Main stream</td>
+    <td> The Admin has right to delete the profile incase of misuse of our site.</td>
+</tr>
+    <tr>
+  <td> Alternate streams</td>
+    <td> none</td>
+</tr>
+    <tr>
+  <td>Postconditions</td>
+    <td> After deletion of account, the user cannot login with the same account into our system.</td>
 </tr>
  </table>
   
