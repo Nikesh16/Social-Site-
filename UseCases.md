@@ -15,7 +15,7 @@
   2.Guests <br>
   -Allowed to view the login and registration section <br>
   -Allowed to View terms and Policies  <br>
-  -Allowed to read about the author of the site <br>
+  -Allowed to read about the authors of our site  <br>
   3.Users <br>
   -Update profile and cover images <br>
   -Post images/text <br>
