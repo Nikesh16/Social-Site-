@@ -21,7 +21,6 @@
   -Post images/text <br>
   -Follow users <br>
   -Send messages (message format: text/picture) <br>
-  -View timeline <br> 
   -Change setting/about <br>
   -Generate Web portfolio <br>
   -Check notification bar <br>
