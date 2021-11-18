@@ -82,7 +82,7 @@ List of entities
       gender
       </td>
      <td>
-        Gender is one of the option in the registration section. It stores whether the user is male or female. The maximum letters to store in this column is 6 that is Female.
+        Gender is one of the option in the registration section. It stores whether the user is male or female.
      </td>
     </tr>
    <tr>
@@ -207,7 +207,7 @@ List of entities
       likes
       </td>
      <td>
-       Stores number of like in the post
+       Stores number of likes in the post
        </td>
     </tr>
        <tr>
@@ -227,126 +227,9 @@ List of entities
        </td>
     </tr>
   </table>
-  <table style="height: 600px;">
-  <tr>
-    <td>
-List of entities  
-      </td>
-   <td>
-    Property  
-     </td>
-    <td>
-    Сomments
-</td>
-    </tr>
-  <tr>
-    <td rowspan="10">
-     notification_seen
-      </td>
-    <tr>
-    <td>
-      id
-      </td>
-    <td>
-      test id
-      </td>
-    </tr>
-    <td>
-       userid
-</td> 
-    <td>
-     comment for userid
-      </td>
-    </tr>
-  <tr>
-    <td>
-      notification_id
-      </td>
-    <td>
-      test comment for notification_id
-      </td>
-    </tr>
-  </table>
+  
   
   ------
-  
-  <table style="height: 600px;">
-  <tr>
-    <td>
-List of entities  
-      </td>
-   <td>
-    Property  
-     </td>
-    <td>
-    Сomments
-</td>
-    </tr>
-  <tr>
-    <td rowspan="10">
-      notifications
-      </td>
-    <tr>
-    <td>
-      id
-      </td>
-    <td>
-      test id
-      </td>
-    </tr>
-    <td>
-       userid
-</td> 
-    <td>
-     comment for userid
-      </td>
-    </tr>
-  <tr>
-    <td>
-      activity
-      </td>
-    <td>
-      test activity
-      </td>
-    </tr>
-   
-   <tr>
-    <td>
-      contentid
-      </td>
-     <td>
-       text comment for contentid
-       </td>
-    </tr>
-   <tr>
-    <td>
-      content_owner
-      </td>
-     <td>
-       test comment for  content_owner
-       </td>
-    </tr>
-   <tr>
-    <td>
-      content_type
-      </td>
-     <td>
-       test comment for content_type
-       </td>
-    </tr>
-       <tr>
-    <td>
-      date
-      </td>
-     <td>
-       test comment for date
-       </td>
-    </tr>
-  </table>
-  
-  ------
-  
-  
   
   <table style="height: 600px;">
   <tr>
@@ -369,14 +252,14 @@ List of entities
       id
       </td>
     <td>
-      test id
+      Primary Key
       </td>
     </tr>
     <td>
        likes
 </td> 
     <td>
-     comment for likes
+    It stores the userid and date of the person who likes the post/images. 
       </td>
     </tr>
   <tr>
@@ -384,16 +267,24 @@ List of entities
       contentid
       </td>
     <td>
-      test contentid
+      It stores userid or postid from above columns 
       </td>
     </tr>
    
    <tr>
     <td>
-      following
+      type
       </td>
      <td>
-       text comment for following
+      Type stores infomation about contentid. Contentid has connection with postid and userid. If type stores post, then contentid here means postid.  
+       </td>
+    </tr>
+   <tr>
+    <td>
+      Following
+      </td>
+     <td>
+       It stores the userid and date of users whom he/she is following.
        </td>
     </tr>
   </table>
@@ -401,6 +292,127 @@ List of entities
   
   ------
   
+  <table style="height: 600px;">
+  <tr>
+    <td>
+List of entities  
+      </td>
+   <td>
+    Property  
+     </td>
+    <td>
+    Сomments
+</td>
+    </tr>
+  <tr>
+    <td rowspan="10">
+     notification_seen
+      </td>
+    <tr>
+    <td>
+      id
+      </td>
+    <td>
+      Primary Key
+      </td>
+    </tr>
+    <td>
+       userid
+</td> 
+    <td>
+      Userid is same column from users table. Its used here inorder to know which user is engaged in viewing notification. 
+      </td>
+    </tr>
+  <tr>
+    <td>
+      notification_id
+      </td>
+    <td>
+      Stores id for notification. 
+      </td>
+    </tr>
+  </table>
+  
+  ------
+      
+      
+      
+  
+  <table style="height: 600px;">
+  <tr>
+    <td>
+List of entities  
+      </td>
+   <td>
+    Property  
+     </td>
+    <td>
+    Сomments
+</td>
+    </tr>
+  <tr>
+    <td rowspan="10">
+      notifications
+      </td>
+    <tr>
+    <td>
+      id
+      </td>
+    <td>
+      Primary Key
+      </td>
+    </tr>
+    <td>
+       userid
+</td> 
+    <td>
+      Userid is same column from users table. Its used here inorder to know which user is engaged in likes/comments on your pictures/post.
+      </td>
+    </tr>
+  <tr>
+    <td>
+      activity
+      </td>
+    <td>
+      Stores texts inorder to notify the activities such as follow, likes, comments. 
+      </td>
+    </tr>
+   
+   <tr>
+    <td>
+      contentid
+      </td>
+     <td>
+       contentid stores postid or userid. 
+       </td>
+    </tr>
+   <tr>
+    <td>
+      content_owner
+      </td>
+     <td>
+      It stores the the userid of the post owner. The userid is stored in users table of our database.
+       </td>
+    </tr>
+   <tr>
+    <td>
+      content_type
+      </td>
+     <td>
+      Generally, it stores type of the content like post, profile and comment
+       </td>
+    </tr>
+       <tr>
+    <td>
+      date
+      </td>
+     <td>
+      It stores the date and time of notification. 
+       </td>
+    </tr>
+  </table>
+  
+  ------
   
   
   <table style="height: 600px;">
@@ -424,14 +436,14 @@ List of entities
       id
       </td>
     <td>
-      test id
+      Primary Key
       </td>
     </tr>
     <td>
        userid
 </td> 
     <td>
-     comment for userid
+     Userid is same column from users table. Its used here inorder to know which user is engaged in following the content. 
       </td>
     </tr>
   <tr>
@@ -439,7 +451,7 @@ List of entities
       contentid
       </td>
     <td>
-      test contentid
+     Stores either the postid or userid depending on the information provided by content_type
       </td>
     </tr>
    
@@ -448,7 +460,7 @@ List of entities
       content_type
       </td>
      <td>
-       text comment for content_type
+       It stores information such as post, comment or profile.
        </td>
     </tr>
    <tr>
@@ -456,7 +468,7 @@ List of entities
      date
       </td>
      <td>
-       test comment for date
+       Stores the date of following the post/user.
        </td>
     </tr>
 
