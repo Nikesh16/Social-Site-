@@ -366,8 +366,7 @@ List of entities
       following_content
       </td>
    
-    <td>
-       userid
+    
 </td> 
     <td>
      Userid 
