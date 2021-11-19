@@ -1,4 +1,4 @@
-<b>List of entities, properties, and relationships</b>
+<b>List of entities, attributes, and relationships</b>
 
 
 <table style="height: 600px;">
@@ -7,7 +7,7 @@
 List of entities  
       </td>
    <td>
-    Property  
+    Attributes  
      </td>
     <td>
     Сomments
@@ -128,7 +128,7 @@ List of entities
 List of entities  
       </td>
    <td>
-    Property  
+    Attributes  
      </td>
     <td>
     Сomments
@@ -237,7 +237,7 @@ List of entities
 List of entities  
       </td>
    <td>
-    Property  
+    Attributes  
      </td>
     <td>
     Сomments
@@ -298,7 +298,7 @@ List of entities
 List of entities  
       </td>
    <td>
-    Property  
+    Attributes 
      </td>
     <td>
     Сomments
@@ -344,7 +344,7 @@ List of entities
 List of entities  
       </td>
    <td>
-    Property  
+   Attributes
      </td>
     <td>
     Сomments
@@ -421,7 +421,7 @@ List of entities
 List of entities  
       </td>
    <td>
-    Property  
+    Attributes  
      </td>
     <td>
     Сomments
