@@ -407,7 +407,25 @@ List of entities
     </tr>
 
   </table>
+<h3> Thus, there are the following relationships between entities:</h3> <br>
+- A one-to-many relationship(Post_creation) between users and posts. A single user can create multiple numbers of post.  <br>
+- A one-to-many relationship (User_notification) between users and notifications. It means that a single user can get multiple number of notifications. <br>
+- A many-to-one relationship (User_follow)between users and Following. Many followers can follow the same account. <br>
+- A one-to-many relationship (Post_following) between Following_content and posts. Meaning, the following content may be one but the posts which include (likes, comments and many more ) can be multiple. <br>
+- A one-to-many relationship(Post_like) between posts and likes. It means that one post can have multiple number of likes in it. <br>
+- A one-to-many relationship(Post_notification) between posts and notifications. Meaning, single post can have multiple options such as likes, comments, etc resulting in multiple number of posts.<br>
+- One-to-many relationshiop (User_like) between users and likes. A single user can have multiple number of likes in his/her photos/post.<br>
  
  
+ <h2> :fire:ER Relational Diagram </h2>
+
+<img width="100%" height = "150%" src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/ER-Relational%20Diagram.jpg" alt="cover" />
+
+
+
+ <h2> :fire: ER Logical Diagram </h2>
+
+<img width="100%" height = "150%" src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/ER%20Logical%20Diagram.jpeg" alt="cover" />
+
   
   
