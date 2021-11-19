@@ -114,7 +114,7 @@ List of entities
       date
       </td>
      <td>
-       Stores the date and time of posting photos/ posts. 
+       Stores the date and time of registration
        </td>
     </tr>
   </table>
