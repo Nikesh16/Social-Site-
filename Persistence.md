@@ -365,20 +365,15 @@ List of entities
     <td rowspan="10">
       following_content
       </td>
-    <tr>
-    <td>
-      id
-      </td>
-    <td>
-      Primary Key
-      </td>
-    </tr>
+   
     <td>
        userid
 </td> 
     <td>
-     Userid is same column from users table. Its used here inorder to know which user is engaged in following the content. 
+     Userid 
       </td>
+   <td> is same column from users table. Its used here inorder to know which user is engaged in following the content. 
+     </td>
     </tr>
   <tr>
     <td>
