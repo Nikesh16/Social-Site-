@@ -1,6 +1,5 @@
 <b>List of entities, attributes, and relationships</b>
 
-
 <table style="height: 600px;">
   <tr>
     <td>
@@ -17,14 +16,7 @@ List of entities
     <td rowspan="15">
       users
       </td>
-    <tr>
-    <td>
-      id
-      </td>
-    <td>
-      Primary Key  
-      </td>
-    </tr>
+   
   <tr>
     <td>
        userid
@@ -138,12 +130,8 @@ List of entities
     <td rowspan="15">
       posts
       </td>
-    <tr>
-    <td>
-      id
-      </td>
-    <td>
-     Primary Key
+  
+    
      
      
   <tr>
@@ -249,13 +237,8 @@ List of entities
       </td>
     <tr>
     <td>
-      id
-      </td>
-    <td>
-      Primary Key
-      </td>
-    </tr>
-    <td>
+     
+      
        likes
 </td> 
     <td>
@@ -292,49 +275,7 @@ List of entities
   
   ------
   
-  <table style="height: 600px;">
-  <tr>
-    <td>
-List of entities  
-      </td>
-   <td>
-    Attributes 
-     </td>
-    <td>
-    Сomments
-</td>
-    </tr>
-  <tr>
-    <td rowspan="10">
-     notification_seen
-      </td>
-    <tr>
-    <td>
-      id
-      </td>
-    <td>
-      Primary Key
-      </td>
-    </tr>
-    <td>
-       userid
-</td> 
-    <td>
-      Userid is same column from users table. Its used here inorder to know which user is engaged in viewing notification. 
-      </td>
-    </tr>
-  <tr>
-    <td>
-      notification_id
-      </td>
-    <td>
-      Stores id for notification. 
-      </td>
-    </tr>
-  </table>
-  
-  ------
-      
+ 
       
       
   
@@ -354,20 +295,13 @@ List of entities
     <td rowspan="10">
       notifications
       </td>
-    <tr>
-    <td>
-      id
-      </td>
-    <td>
-      Primary Key
-      </td>
-    </tr>
-    <td>
-       userid
 </td> 
     <td>
-      Userid is same column from users table. Its used here inorder to know which user is engaged in likes/comments on your pictures/post.
+      Userid 
       </td>
+    <td>
+     It stores the userid of the user who is engaged in performing thr activities such as follow, likes and comments. 
+    </td>
     </tr>
   <tr>
     <td>
