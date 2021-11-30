@@ -109,6 +109,14 @@ List of entities
        Stores the date and time of registration
        </td>
     </tr>
+      <tr>
+    <td>
+      likes
+      </td>
+     <td>
+      Likes generally means like following. It displays number of followers of the user.
+       </td>
+    </tr>
   </table>
 
 
