@@ -192,10 +192,10 @@ List of entities
     </tr>
    <tr>
     <td>
-      comments
+      --
       </td>
      <td>
-       Stores number of comments in the post. 
+       --
        </td>
     </tr>
        <tr>
