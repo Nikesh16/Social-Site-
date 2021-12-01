@@ -192,10 +192,10 @@ List of entities
     </tr>
    <tr>
     <td>
-      --
+      Comments
       </td>
      <td>
-       --
+       Adding comments in the post/profile
        </td>
     </tr>
        <tr>
