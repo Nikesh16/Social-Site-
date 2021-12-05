@@ -4,9 +4,9 @@
 💠: Sign Up ▶️: Authorized sign Up. <br>
 - No space after first and last name  <br>
 - All the sections of sign Up are compulsory required to fill up. Shows error if isnot filled 
-<h1>Registered/Authorized User  </h1>
+<h2>Registered/Authorized User  </h2>
 
-## Profile page consists of following things: ##    
+### Profile page consists of following things: ###  
  * Header section: On the search box, People can search the other users registered in our site.
  * Notification bell: Registered user can click on the bell and check the activities done by other others in their profile (like, comment) 
  * Logout: Logout option can be found in the header area of each page in our system. 
@@ -20,11 +20,13 @@
  * Web Portfolio: People can generate their own web portfolio. The photo in this portfolio is updated from your profile picture. So, people must upload their profile picture inorder to see their photo in Web Portfolio section.
  * Inside Web Portfolio, there are 3 forms which people can fill up inorder to generate their web portfolio. Note that: We don't save your database here because we care about people's privacy.
 ### Post Section  ###
- * People can post photos and text(Photos of jpg format is only allowed else it shows error
+ * Post: People can post photos and text (Photos of jpg format is only allowed in other case, it shows error)
  * like
  * Comment
  * Edit
  * Delete
+ <h2>Admin </h2>
+ Has
  
  
    
