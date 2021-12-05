@@ -1,10 +1,15 @@
 <h2>List of actors </h2>
+  1.Delete the user in case of violation of our terms and policies  <br>
+  -Check posts/comments <br>
+  -View/delete the messages <br>
+  -View/delete the about section<br>
+  -View the photos uploaded by users <br>
   
-  1.Guests <br>
+  2.Guests <br>
   -Allowed to view the login and registration section <br>
   -Allowed to View terms and Policies  <br>
   -Allowed to read about the authors of our site  <br>
-  2.Users <br>
+  3.Users <br>
   -Update profile and cover images <br>
   -Post images/text <br>
   -Follow users <br>
