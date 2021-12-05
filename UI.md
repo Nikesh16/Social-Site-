@@ -1,9 +1,13 @@
 # Designing ways to interact with the application #
-### List of controls ###
+### List of Interface ###
 💠: Login  <br>
+- If email and password is wrong, the message displays no such email/password found.
+- if either email or password is wrong, it displays error in email/password. It's done to protect from hackers <br>
 💠: Sign Up ▶️: Authorized sign Up. <br>
 - No space after first and last name  <br>
-- All the sections of sign Up are compulsory required to fill up. Shows error if isnot filled 
+- All the sections of sign Up are compulsory required to fill up. Shows error if is not filled 
+- First and last name cannot be number  
+- Confirm password and password must match. 
 <h2>Registered/Authorized User  </h2>
 
 ### Profile page consists of following things: ###  
@@ -19,14 +23,18 @@
  * Photos: People can view all the photos that they have uploaded in our site in this section.
  * Web Portfolio: People can generate their own web portfolio. The photo in this portfolio is updated from your profile picture. So, people must upload their profile picture inorder to see their photo in Web Portfolio section.
  * Inside Web Portfolio, there are 3 forms which people can fill up inorder to generate their web portfolio. Note that: We don't save your database here because we care about people's privacy.
-### Post Section  ###
+### Post Section  ### 
  * Post: People can post photos and text (Photos of jpg format is only allowed in other case, it shows error)
- * like
+ * Like
  * Comment
  * Edit
  * Delete
- <h2>Admin </h2>
- Has
+
+Additionaly, the user has theme section in the menu bar, where they can change the theme of the site in future. 
+
+
+
+ 
  
  
    
