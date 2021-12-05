@@ -1,22 +1,10 @@
 <h2>List of actors </h2>
-  1.Administration <br> 
-  - Delete the user in case of violation of our   
-  <a href="https://github.com/Nikesh16/Social-Site-/blob/main/siteRules" onclick="window.open('example.html', '_self');"> terms and policies
-
-</a>
-<br>
-  - Check the posts/comments <br>
-  - View/delete the messages <br>
-  - View/Delete the About section <br>
-  - View the photos uploaded by the users <br>
-  - Check the followers of the users <br>
-  - Edit the post if required <br>
-  - Edit the name of the user if required. <br>
-  2.Guests <br>
+  
+  1.Guests <br>
   -Allowed to view the login and registration section <br>
   -Allowed to View terms and Policies  <br>
   -Allowed to read about the authors of our site  <br>
-  3.Users <br>
+  2.Users <br>
   -Update profile and cover images <br>
   -Post images/text <br>
   -Follow users <br>
