@@ -11,10 +11,13 @@
 <h2>Registered/Authorized User  </h2>
 
 ### Profile page consists of following things: ###  
- * Header section: On the search box, People can search the other users registered in our site.
+ * Header section: On the search box, People can search the other users registered in our site. 
+ * Search result: People can click on the users result given by our site and navigate to that users profile. They can comment/likes other users <br>
+ * Comment: All the comments in the users post as well as other peoples post can be view by the registered user.
  * Notification bell: Registered user can click on the bell and check the activities done by other others in their profile (like, comment) 
  * Logout: Logout option can be found in the header area of each page in our system. 
- * Change profile and cover pictures.
+ * Change profile pictures: The changes will effect on three places: 
+ *
  * Settings: Here, user can change their informations that they had provided in the registration page. Additionally, added about box in Setting to change the about section of the profile page
  * View others profile(View Timeline of other people's) : People can search the name of other registered users and view their timeline. Like, comments can be done in their timeline as well.
  * About: The thing that you type in the about box in the setting option will appear here.
