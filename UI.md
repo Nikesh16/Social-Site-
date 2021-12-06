@@ -160,7 +160,9 @@ Additionaly, the user has theme section in the menu bar, where they can change t
 
  
  </table>
-
+<h2> Diagram of  interfaces   </h2> <br> 
+<h3> Non-Registered Users </h3> <br> 
+<h3> Registered Users  </h3> <br>
 
 
 
