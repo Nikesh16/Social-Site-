@@ -1,9 +1,10 @@
 # Designing ways to interact with the application #
 ### List of Interface ###
-1. <a href="na" name="na">Login </a> <br>
+
+1.   Login<br>  
 - If email and password is wrong, the message displays no such email/password found.
 - if either email or password is wrong, it displays error in email/password. It's done to protect from hackers <br>
-2. Sign Up ▶️: Authorized sign Up. <br>
+2.  Sign Up ▶️: Authorized sign Up.  <br>
 - No space after first and last name  <br>
 - All the sections of sign Up are compulsory required to fill up. Shows error if is not filled 
 - First and last name cannot be number  
@@ -13,38 +14,38 @@
 <h2>Registered/Authorized User  </h2>
 
 ### Profile page consists of following things: ###  
- 4. Headersection: It consists of:
-  - Search bar: People can search for the registered users in our site <br>
+ 4. Header bar: It consists of:
+  - Search people design: People can search for the registered users in our site <br>
   - Notification bell
   - Logout: Logout option can be found in the header area of each page in our site.
   - SocialHood text in the top right corner of header. On clicking it, people navigate to their profile page.
  
- * Change profile pictures: The change will effect on four places:  <br>
+ 5. Profile page and after Changing profile/cover pictures: The change will effect on four places:  <br>
   ---> On the header section: the small icon on the header section changes to your profile picture. <br>
   ---> The top right profile picture corner below header changes to profile picture <br>
   ---> the small icon on the post input form changes to profile picture <br>
   ---> The picture on Web portfolio changes to your recent profile picture.
- 5. Settings: <br>
+ 6. Settings: <br>
  ---> Change First and Last name <br>
  ---> Change Email <br>
  ---> Change password <br>
  ---> Change gender <br>
  ---> Update About me <br>
- 6. View Timeline/profile of other people's : People can search the name of other registered users and view their timeline. Like, comments can be done in their timeline as well.Interface here are: <br>
+ 7. View Timeline/profile of other people's : People can search the name of other registered users and view their timeline. Like, comments can be done in their timeline as well.Interface here are: <br>
  ---> The profile page name of that user <br>
  ---> Same profile interface as the current user <br>
  ---> View The comments on the post of other users <br>
  
- 7. About: The thing that you type in the about textarea in the setting appears here. <br>
- 8. Follow: People can follow other users.
- 9. Following: People can get to know who is following them. 
- 10 Photos: People can view all the photos that they have uploaded in our site in this section.
- 11. Web Portfolio: A beautiful web portfolio based on the informations provide by the user is generated. 
+ 8. About: The thing that you type in the about textarea in the setting appears here. <br>
+ 9. Follow: People can follow other users. <br>
+ 10. Following: People can get to know who is following them.  <br>
+ 11 Photos: People can view all the photos that they have uploaded in our site in this section. <br>
+ 12. Web Portfolio: A beautiful web portfolio based on the informations provide by the user is generated. 
  * Inside Web Portfolio, there are 3 forms:<br>
  --->indexResume, biodata1, biodata2: People enter their names and other informations. The data entered here is transferred to next form. Again, the data entered in the next form is transferred into the next form and so on the data reaches to the final web portfolio. No data is saved in our database because we care about your privacy.  
  
 ### Post Section  ### 
-  12.Post: People can post photos and text (Photos of jpg format is only allowed in other case, it shows error)
+  13.Post: People can post photos and text (Photos of jpg format is only allowed in other case, it shows error)
  * Like
  * Comment <br>
 ---> People can view the comments done by other users. They can also edit, delete their comment. <br>
@@ -53,7 +54,7 @@
 ---> Buttom to go back to profile page. 
 
 
- 13 <a name="#aus"> Edit </a> <br>
+ 14  Edit  <br>
  ---> After clicking the edit button, user navigate to different section where they can edit their comment/post. <br>
  ---> Button to go back to the profile page
  * Delete<br>
@@ -63,18 +64,77 @@
 Additionaly, the user has theme section in the menu bar, where they can change the theme of the site in future. 
  
  :fire:Sketches of interfaces:
+ <table>
+ <tr>
+  <td>
+  1. Login
+<img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/SignUp.png"> 
+   </td>
  
+<td> 2.Sign Up <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/login.png"> </td> 
+ </table>
+ ****************************************************************************
  
+ <table>
+ <tr>
+  <td>
+  3. Header Bar
+<img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_1.png"> 
+   </td>
+ 
+<td>- Search people with result<img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/search%20with%20result.png"> </td> 
+  </tr>
+  <td>- Search people without result<img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/search%20without%20result.png"> </td> 
+ <td>- Notification bell with popup message
+  <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_3.png"> </td> 
+ </table>
+ ****************************************************************************
+ <table>
+ <tr>
+  <td>
+  5.Profile Page Original
+<img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/finaloriginal.png"> 
+   </td>
+ 
+<td> 5.Profile Page after Changing cover and profile images <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_5.png"> </td> 
+ </table>  
+ ****************************************************************************
+ <table>
+ <tr>
+  <td>
+  6.Setting
+<img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Setting.png"> 
+   </td>
+ 
+<td> 8.About <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_6.png"> </td> 
+ </table>
+ ****************************************************************************
+  <table>
+ <tr>
+  <td>
+  9.Follow (Before Following)
+<img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_9.png"> 
+   </td>
+ 
+<td> 10.Following<img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_10.png"> </td> 
+ </table>
+ ****************************************************************************
+  <table>
+ <tr>
+  <td>
+  11.Photos
+   <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_9.png"> 
+   </td>
+ 
+<td> 13.Post <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_10.png"> </td> 
+ </table>
+ ****************************************************************************
+ ****************************************************************************
+ ****************************************************************************
+ ****************************************************************************
+ ****************************************************************************
  
 
-
-
-
-
-
- 
- 
- 
    
 
 
