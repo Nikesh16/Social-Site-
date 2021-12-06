@@ -66,11 +66,11 @@ Additionaly, the user has theme section in the menu bar, where they can change t
  <table>
  <tr>
   <td>
-  1. Login
+  2. Signup
 <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/SignUp.png"> 
    </td>
  
-<td> 2.Sign Up <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/login.png"> </td> 
+<td> 1. Login <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/login.png"> </td> 
  </table>
 -----------------------------------------
  
