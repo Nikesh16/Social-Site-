@@ -1,10 +1,10 @@
 # Designing ways to interact with the application #
 ### List of Interface ###
-1. Homepage <br>
-2.  Login<br>  
+
+1.   Login<br>  
 - If email and password is wrong, the message displays no such email/password found.
 - if either email or password is wrong, it displays error in email/password. It's done to protect from hackers <br>
-3.  Sign Up ▶️: Authorized sign Up.  <br>
+2.  Sign Up ▶️: Authorized sign Up.  <br>
 - No space after first and last name  <br>
 - All the sections of sign Up are compulsory required to fill up. Shows error if is not filled 
 - First and last name cannot be number  
@@ -63,23 +63,11 @@
 Additionaly, the user has theme section in the menu bar, where they can change the theme of the site in future. 
  
  :fire:Sketches of interfaces:
- 
-  <table>
- <tr>
-  <td>
-  1. Homepage
-<img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_20.png"> 
-   </td>
- 
- </table>
- 
- -----------------------------------------
- 
  <table>
  <tr>
   <td>
   2. Signup
-<img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/SignUp.png"> 
+<img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_21.png"> 
    </td>
  
 <td> 1. Login <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/login.png"> </td> 
@@ -96,8 +84,7 @@ Additionaly, the user has theme section in the menu bar, where they can change t
 <td>- Search people with result<img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/search%20with%20result.png"> </td> 
   </tr>
   <td>- Search people without result<img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/search%20without%20result.png"> </td> 
- <td>- Notification bell with popup message
-  <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_3.png"> </td> 
+ 
  </table>
 -----------------------------------------
 
