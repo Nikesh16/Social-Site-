@@ -39,7 +39,7 @@
  8. About: The thing that you type in the about textarea in the setting appears here. <br>
  9. Follow: People can follow other users. <br>
  10. Following: People can get to know who is following them.  <br>
- 11 Photos: People can view all the photos that they have uploaded in our site in this section. <br>
+ 11. Photos: People can view all the photos that they have uploaded in our site in this section. <br>
  12. Web Portfolio: A beautiful web portfolio based on the informations provide by the user is generated. 
  * Inside Web Portfolio, there are 3 forms:<br>
  --->indexResume, biodata1, biodata2: People enter their names and other informations. The data entered here is transferred to next form. Again, the data entered in the next form is transferred into the next form and so on the data reaches to the final web portfolio. No data is saved in our database because we care about your privacy.  
@@ -72,7 +72,7 @@ Additionaly, the user has theme section in the menu bar, where they can change t
  
 <td> 2.Sign Up <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/login.png"> </td> 
  </table>
- ****************************************************************************
+-----------------------------------------
  
  <table>
  <tr>
@@ -87,7 +87,8 @@ Additionaly, the user has theme section in the menu bar, where they can change t
  <td>- Notification bell with popup message
   <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_3.png"> </td> 
  </table>
- ****************************************************************************
+-----------------------------------------
+
  <table>
  <tr>
   <td>
@@ -97,7 +98,8 @@ Additionaly, the user has theme section in the menu bar, where they can change t
  
 <td> 5.Profile Page after Changing cover and profile images <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_5.png"> </td> 
  </table>  
- ****************************************************************************
+-----------------------------------------
+
  <table>
  <tr>
   <td>
@@ -107,7 +109,8 @@ Additionaly, the user has theme section in the menu bar, where they can change t
  
 <td> 8.About <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_6.png"> </td> 
  </table>
- ****************************************************************************
+-----------------------------------------
+
   <table>
  <tr>
   <td>
@@ -117,7 +120,8 @@ Additionaly, the user has theme section in the menu bar, where they can change t
  
 <td> 10.Following<img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_10.png"> </td> 
  </table>
- ****************************************************************************
+-----------------------------------------
+
   <table>
  <tr>
   <td>
@@ -129,7 +133,22 @@ Additionaly, the user has theme section in the menu bar, where they can change t
   <td> -Comment <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_13.png"> </td> 
  </table>
  
- ****************************************************************************
+-----------------------------------------
+
+ <table>
+ <tr>
+  <td>
+  12.Web  Portfolio
+   <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Biodata1.png"> 
+   </td>
+ 
+<td>  <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Biodata2.png"> </td> 
+  <td>  <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Biodata3.png"> </td> 
+  <td> <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/FinalCV.png"> </td> 
+ </table>
+ 
+-----------------------------------------
+
  
   <table>
  <tr> 
@@ -141,13 +160,7 @@ Additionaly, the user has theme section in the menu bar, where they can change t
 
  
  </table>
- ****************************************************************************
- ****************************************************************************
- ****************************************************************************
- ****************************************************************************
- 
 
-   
 
 
 
