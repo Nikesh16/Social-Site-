@@ -57,8 +57,7 @@
  14  Edit  <br>
  ---> After clicking the edit button, user navigate to different section where they can edit their comment/post. <br>
  ---> Button to go back to the profile page
- * Delete<br>
- ---> New interface with delete buttom. After deletion, the post no longer exists and the user redirects to profile page.
+15. Delete
 
 <h4> The header is located in all the pages of our site. People can easily navigate to their profile page whenever they want. </h4>
 Additionaly, the user has theme section in the menu bar, where they can change the theme of the site in future. 
@@ -123,12 +122,25 @@ Additionaly, the user has theme section in the menu bar, where they can change t
  <tr>
   <td>
   11.Photos
-   <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_9.png"> 
+   <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_11.png"> 
    </td>
  
-<td> 13.Post <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_10.png"> </td> 
+<td> 13.Post <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_12.png"> </td> 
+  <td> -Comment <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_13.png"> </td> 
  </table>
+ 
  ****************************************************************************
+ 
+  <table>
+ <tr> 
+<td> 14.Edit <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_16.png"> </td> 
+  <td>
+  15.Delete
+   <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_14.png"> 
+   </td>
+
+ 
+ </table>
  ****************************************************************************
  ****************************************************************************
  ****************************************************************************
