@@ -161,7 +161,7 @@ Additionaly, the user has theme section in the menu bar, where they can change t
  </table>
  
  <h2>Interface Diagram </h2>
- <h3>Login System Diagram</h3>
+ <h3>Login/SignUp Diagram</h3>
  <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Inactive%20Users.jpeg"> 
 
 
