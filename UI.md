@@ -167,13 +167,20 @@ Additionaly, the user has theme section in the menu bar, where they can change t
   15.Delete
    <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_14.png"> 
    </td>
-
+ </table>
  
+ 
+ 
+  <table>
+ <tr> 
+<td> 14.Admin-Delete  <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_24.png"> </td> 
+  <td>
  </table>
  
  <h2>Interface Diagram </h2>
  <h3>Login/SignUp Diagram</h3>
  <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Inactive%20Users.jpeg"> 
+<h3> Registred Users/Admins</h3>
 
 
 
