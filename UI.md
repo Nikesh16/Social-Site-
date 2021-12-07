@@ -94,7 +94,7 @@ Additionaly, the user has theme section in the menu bar, where they can change t
  
 <td>- Search people with result<img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/search%20with%20result.png"> </td> 
   </tr>
-  <td>- Search people without result<img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/search%20without%20result.png"> </td> 
+  <td>- Notification without result<img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/search%20without%20result.png"> </td> 
  
  </table>
 -----------------------------------------
@@ -174,7 +174,6 @@ Additionaly, the user has theme section in the menu bar, where they can change t
  <h2>Interface Diagram </h2>
  <h3>Login/SignUp Diagram</h3>
  <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Inactive%20Users.jpeg"> 
-
 
 
 
