@@ -173,7 +173,7 @@ Additionaly, the user has theme section in the menu bar, where they can change t
  
   <table>
  <tr> 
-<td> 14.Admin-Delete  <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_24.png"> </td> 
+<td> 14.Admin-can delete any post  <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_24.png"> </td> 
   <td>
  </table>
  
