@@ -32,10 +32,10 @@
  ---> View The comments on the post of other users <br>
  
  7. About: The thing that you type in the about textarea in the setting appears here. <br>
- 8. Follow: People can follow other users. <br>
+ 8. Follow <br>
  9. Following: People can get to know who is following them.  <br>
- 10. Photos: People can view all the photos that they have uploaded in our site in this section. <br>
- 11. Web Portfolio: A beautiful web portfolio based on the informations provide by the user is generated. 
+ 10.Photos: People can view all the photos that they have uploaded in our site in this section. <br>
+ 11. Web Portfolio: A beautiful web portfolio based on the informations provide by the user is generated.  <br>
  * Inside Web Portfolio, there are 3 forms:<br>
  --->indexResume, biodata1, biodata2: People enter their names and other informations. The data entered here is transferred to next form. Again, the data entered in the next form is transferred into the next form and so on the data reaches to the final web portfolio. No data is saved in our database because we care about your privacy.  
  
@@ -54,13 +54,13 @@
 ---> Buttom to go back to profile page. 
 
 
- 14  Edit  <br>
+ *  Edit  <br>
  ---> After clicking the edit button, user navigate to different section where they can edit their comment/post. <br>
  ---> Button to go back to the profile page
-15. Delete
+*   Delete
 ---><h4>The header is located in all the pages of our site. People can easily navigate to their profile page whenever they want. </h4>
 --->Additionaly, the user has theme section in the menu bar, where they can change the theme of the site in future. 
- 
+ <h4>14. Admin </h4>
  :fire:Sketches of interfaces:
  
   <table>
@@ -167,9 +167,9 @@
  
   <table>
  <tr> 
-<td> 14.Edit <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_16.png"> </td> 
+<td> *Edit <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_16.png"> </td> 
   <td>
-  15.Delete
+  15. *Delete
    <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_14.png"> 
    </td>
  </table>
