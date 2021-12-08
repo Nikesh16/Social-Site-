@@ -19,31 +19,32 @@
   - Logout: Logout option can be found in the header area of each page in our site.
   - SocialHood text in the top right corner of header. On clicking it, people navigate to their profile page.
  
- 5. Profile page and after Changing profile/cover pictures: The change will effect on four places:  <br>
-  ---> On the header section: the small icon on the header section changes to your profile picture. <br>
-  ---> The top right profile picture corner below header changes to profile picture <br>
-  ---> the small icon on the post input form changes to profile picture <br>
-  ---> The picture on Web portfolio changes to your recent profile picture.
- 6. Settings: <br>
+
+ 5. Settings: <br>
  ---> Change First and Last name <br>
  ---> Change Email <br>
  ---> Change password <br>
  ---> Change gender <br>
  ---> Update About me <br>
- 7. View Timeline/profile of other people's : People can search the name of other registered users and view their timeline. Like, comments can be done in their timeline as well.Interface here are: <br>
+ 6 View Timeline/profile of other people's(Load profile by userid) : People can search the name of other registered users and view their timeline. Like, comments can be done in their timeline as well.Interfaces here are: <br>
  ---> The profile page name of that user <br>
  ---> Same profile interface as the current user <br>
  ---> View The comments on the post of other users <br>
  
- 8. About: The thing that you type in the about textarea in the setting appears here. <br>
- 9. Follow: People can follow other users. <br>
- 10. Following: People can get to know who is following them.  <br>
- 11. Photos: People can view all the photos that they have uploaded in our site in this section. <br>
- 12. Web Portfolio: A beautiful web portfolio based on the informations provide by the user is generated. 
+ 7. About: The thing that you type in the about textarea in the setting appears here. <br>
+ 8. Follow: People can follow other users. <br>
+ 9. Following: People can get to know who is following them.  <br>
+ 10. Photos: People can view all the photos that they have uploaded in our site in this section. <br>
+ 11. Web Portfolio: A beautiful web portfolio based on the informations provide by the user is generated. 
  * Inside Web Portfolio, there are 3 forms:<br>
  --->indexResume, biodata1, biodata2: People enter their names and other informations. The data entered here is transferred to next form. Again, the data entered in the next form is transferred into the next form and so on the data reaches to the final web portfolio. No data is saved in our database because we care about your privacy.  
  
 ### Post Section  ### 
+ 12. (Post Section) Profile photo and Cover Section: The change will effect on four places:  <br>
+  ---> On the header section: the small icon on the header section changes to your profile picture. <br>
+  ---> The top right profile picture corner below header changes to profile picture <br>
+  ---> the small icon on the post input form changes to profile picture <br>
+  ---> The picture on Web portfolio changes to your recent profile picture.
   13.Post: People can post photos and text (Photos of jpg format is only allowed in other case, it shows error)
  * Like
  * Comment <br>
@@ -57,9 +58,8 @@
  ---> After clicking the edit button, user navigate to different section where they can edit their comment/post. <br>
  ---> Button to go back to the profile page
 15. Delete
-
-<h4> The header is located in all the pages of our site. People can easily navigate to their profile page whenever they want. </h4>
-Additionaly, the user has theme section in the menu bar, where they can change the theme of the site in future. 
+---><h4>The header is located in all the pages of our site. People can easily navigate to their profile page whenever they want. </h4>
+--->Additionaly, the user has theme section in the menu bar, where they can change the theme of the site in future. 
  
  :fire:Sketches of interfaces:
  
@@ -102,59 +102,64 @@ Additionaly, the user has theme section in the menu bar, where they can change t
  <table>
  <tr>
   <td>
-  5.Profile Page Original
+  5.Profile Page Original (Profile photo and cover section)
 <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/finaloriginal.png"> 
    </td>
  
-<td> 5.Profile Page after Changing cover and profile images <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_5.png"> </td> 
+<td> 5.Profile Page after Changing cover and profile images (Profile photo and cover section)<img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_5.png"> </td> 
  </table>  
 -----------------------------------------
 
  <table>
  <tr>
   <td>
-  6.Setting
+  5.Setting
 <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Setting.png"> 
    </td>
  
-<td> 8.About <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_6.png"> </td> 
+<td> 7.About <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_6.png"> </td> 
  </table>
 -----------------------------------------
 
   <table>
  <tr>
   <td>
-  9.Follow (Before Following)
+  8.Follow (Before Following)
 <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_9.png"> 
    </td>
  
-<td> 10.Following<img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_10.png"> </td> 
- </table>
------------------------------------------
-
-  <table>
- <tr>
-  <td>
-  11.Photos
-   <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_11.png"> 
-   </td>
- 
-<td> 13.Post <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_12.png"> </td> 
-  <td> -Comment <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_13.png"> </td> 
+<td> 9.Following<img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_10.png"> </td> 
  </table>
  
+ 
+ 
 -----------------------------------------
-
+ 
+ 
  <table>
  <tr>
   <td>
-  12.Web  Portfolio
+  11.Web  Portfolio
    <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Biodata1.png"> 
    </td>
  
 <td>  <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Biodata2.png"> </td> 
   <td>  <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Biodata3.png"> </td> 
   <td> <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/FinalCV.png"> </td> 
+ </table>
+ 
+-----------------------------------------
+
+
+  <table>
+ <tr>
+  <td>
+  10.Photos
+   <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_11.png"> 
+   </td>
+ 
+<td> 11.Post <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_12.png"> </td> 
+  <td> -Comment <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_13.png"> </td> 
  </table>
  
 -----------------------------------------
