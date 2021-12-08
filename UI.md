@@ -60,7 +60,7 @@
 *   Delete
 ---><h4>The header is located in all the pages of our site. People can easily navigate to their profile page whenever they want. </h4>
 --->Additionaly, the user has theme section in the menu bar, where they can change the theme of the site in future. 
- <h4>14. Admin </h4>
+ <h4>13. Admin </h4>
  - Has all the functions same as registered user.
  - Additionally, admin can delete any post/comments. 
  :fire:Sketches of interfaces:
@@ -156,11 +156,11 @@
   <table>
  <tr>
   <td>
-  10.Photos
+  11.Photos (Profile and cover image)
    <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_11.png"> 
    </td>
  
-<td> 11.Post <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_12.png"> </td> 
+<td> 12.Post <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_12.png"> </td> 
   <td> -Comment <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_13.png"> </td> 
  </table>
  
@@ -171,7 +171,7 @@
  <tr> 
 <td> *Edit <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_16.png"> </td> 
   <td>
-  15. *Delete
+  *Delete
    <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_14.png"> 
    </td>
  </table>
@@ -180,7 +180,7 @@
  
   <table>
  <tr> 
-<td> 14.Admin-can delete any post  <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_24.png"> </td> 
+<td> 13.Admin-can delete any post  <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_24.png"> </td> 
   <td>
  </table>
  
