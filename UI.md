@@ -1,10 +1,11 @@
 # Designing ways to interact with the application #
 ### List of Interface ###
-1. HomePage
-2.   Login<br>  
+1.HomePage <br>
+2.Login<br>  
 - If email and password is wrong, the message displays no such email/password found.
 - if either email or password is wrong, it displays error in email/password. It's done to protect from hackers <br>
-3.  Sign Up ▶️: Authorized sign Up.  <br>
+
+3.Sign Up ▶️: Authorized sign Up.  <br>
 - No space after first and last name  <br>
 - All the sections of sign Up are compulsory required to fill up. Shows error if is not filled 
 - First and last name cannot be number  
@@ -12,29 +13,30 @@
 
 <h2>Registered/Authorized User  </h2>
 
-### Profile page consists of following things: ###  
- 4. Header bar: It consists of:
+### Profile page consists of following things: ###  <br>
+4.Header bar: It consists of:
   - Search people design: People can search for the registered users in our site <br>
   - Notification bell
   - Logout: Logout option can be found in the header area of each page in our site.
-  - SocialHood text in the top right corner of header. On clicking it, people navigate to their profile page.
- 
+  - SocialHood text in the top right corner of header. On clicking it, people navigate to their profile page. <br>
 
-5. Settings: <br>
+
+ 5.Settings: <br>
  ---> Change First and Last name <br>
  ---> Change Email <br>
  ---> Change password <br>
  ---> Change gender <br>
  ---> Update About me <br>
 * View Timeline/profile of other people's(Load profile by userid) : People can search the name of other registered users and view their timeline. Like, comments can be done in their timeline as well <br>
- --->Same interface as registered user
+ --->Same interface as registered user <br>
  
-6. About: The thing that you type in the about textarea in the setting appears here. <br>
-7. Follow <br>
+ 
+6.About: The thing that you type in the about textarea in the setting appears here. <br>
+7.Follow <br>
 8.Following: People can get to know who is following them.  <br>
 9.Photos: People can view all the photos that they have uploaded in our site in this section. <br> 
 10.Web Portfolio: A beautiful web portfolio based on the informations provided by the user is generated.  <br>
- * Inside Web Portfolio, there are 3 forms:<br>
+*Inside Web Portfolio, there are 3 forms:<br>
  --->indexResume, biodata1, biodata2: People enter their names and other informations. The data entered here is transferred to next form. Again, the data entered in the next form is transferred into the next form and so on the data reaches to the final web portfolio. No data is saved in our database because we care about your privacy.  
  
  
