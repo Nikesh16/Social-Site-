@@ -90,7 +90,7 @@
  <table>
  <tr>
   <td>
-  3. Header Bar
+  4. Header Bar
 <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_1.png"> 
    </td>
  
