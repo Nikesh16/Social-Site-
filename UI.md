@@ -126,11 +126,11 @@
   <table>
  <tr>
   <td>
-  8.Follow (Before Following)
+  7.Follow (Before Following)
 <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_9.png"> 
    </td>
  
-<td> 9.Following<img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_10.png"> </td> 
+<td> 8.Following<img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_10.png"> </td> 
  </table>
  
  
