@@ -119,7 +119,7 @@
 <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Setting.png"> 
    </td>
  
-<td> 7.About <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_6.png"> </td> 
+<td> 6.About <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Screenshot_6.png"> </td> 
  </table>
 -----------------------------------------
 
