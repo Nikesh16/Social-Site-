@@ -188,7 +188,7 @@
  <h3>Login/SignUp Diagram</h3>
  <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Inactive%20Users.jpeg"> 
 <h3> Registred Users/Admins</h3>
-  <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Interface%20DiagramV2.0.png">
+  <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Interface%20DiagramV3.0.png">
  
 
 
