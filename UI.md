@@ -14,10 +14,9 @@
 <h2>Registered/Authorized User  </h2>
 
 ### Profile page consists of following things: ###  <br>
-4.Header bar: It consists of:
-  - Search people design: People can search for the registered users in our site <br>
+  - Search people: People can search for the registered users in our site <br>
   - Notification bell
-  - Logout: Logout option can be found in the header area of each page in our site.
+  - Logout: 
   - SocialHood text in the top right corner of header. On clicking it, people navigate to their profile page. <br>
 
 
@@ -27,7 +26,7 @@
  ---> Change password <br>
  ---> Change gender <br>
  ---> Update About me <br>
-* View Timeline/profile of other people's(Load profile by userid) : People can search the name of other registered users and view their timeline. Like, comments can be done in their timeline as well <br>
+
  --->Same interface as registered user <br>
  
  
