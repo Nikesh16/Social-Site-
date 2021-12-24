@@ -192,7 +192,7 @@
  <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/UI%20diagram%20V5.0.jpg"> 
 <h3> Admins UI diagram</h3>
   <h5> The UI diagram of Admin is same as the user but with an additional feature which is shown in the below diagram:</h5>
-  <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Admin%20UI%20V%206.0.jpg">
+  <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Admin%20UI%20V7.0.jpg">
  
 
 
