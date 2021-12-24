@@ -185,10 +185,14 @@
  </table>
  
  <h2>Interface Diagram </h2>
- <h3>Login/SignUp Diagram</h3>
+  <h3>Login/signUp Diagram</h3>
+ <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Inactive%20Users.jpeg"> 
+  
+ <h3>registers Users diagram</h3>
  <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/UI%20diagram%20V5.0.jpg"> 
-<h3> Registred Users/Admins</h3>
-  <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Interface%20DiagramV3.0.png">
+<h3> Admins UI diagram</h3>
+  <h5> The UI diagram of Admin is same as the user but with an additional feature which is shown in the below diagram:</h5>
+  <img src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/UI%20Diagram%20Admin%20V5.0.jpg">
  
 
 
