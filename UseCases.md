@@ -21,7 +21,7 @@
   -View profile/timeline of following account <br>
  <h2>UseCase Diagram(UML diagram)</h2> 
   <div align="center">
-<img width="500px;" height = "600px" src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/UseCaseDiagram2.png" alt="cover" />
+<img width="500px;" height = "600px" src="https://github.com/Nikesh16/Social-Site-/blob/main/Pictures/Usecase.png" alt="cover" />
 </div>
 
 <h2>Use case specifications</h2>
