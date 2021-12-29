@@ -332,7 +332,7 @@ $mylikes = $user_data['likes'];
 
 
 
-        <form action="" class="create-post">
+        <!-- <form action="" class="create-post">
 
 
 
@@ -343,7 +343,7 @@ $mylikes = $user_data['likes'];
             </div>
             <input type="text" placeholder="What's Up, Nikesh?" id="create-post">
             <input type="submit" value="post" class="btn btn-primary">
-        </form>
+        </form> -->
 <!-- =============FEED2=============== -->
 
 
@@ -353,32 +353,12 @@ $mylikes = $user_data['likes'];
 <!DOCTYPE html>
 	<html>
 	<head>
-		<title>Profile | Mybook</title>
+		<title>Profile  | SocialHood</title>
 	</head>
 
 	<style type="text/css">
 		
-		/* #blue_bar{
-
-			height: 50px;
-			background-color: #405d9b;
-			color: #d9dfeb;
-
-		} */
-
-		/* #search_box{
-
-			width: 400px;
-			height: 20px;
-			border-radius: 5px;
-			border:none;
-			padding: 4px;
-			font-size: 14px;
-			background-image: url(search.png);
-			background-repeat: no-repeat;
-			background-position: right;
-
-		} */
+		
 
 		#textbox{
 
