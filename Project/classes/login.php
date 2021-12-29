@@ -2,8 +2,8 @@
 
 class Login{
 
-    private $error="";
-public  function evaluates($data){
+private $error="";
+public  function evaluate($data){
 
     $email="";  
      // makes first letter capital
