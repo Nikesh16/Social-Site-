@@ -1,142 +1,246 @@
-
-<div id="post">
-   
-<div>
+	<div id="post">
+		<div>
 		
-        <?php 
+			<?php 
 
-            $image = "images/user_male.jpg";
-            if($ROW_USER['gender'] == "Female")
-            {
-                $image = "images/user_female.jpg";
-            }
+				$image = "images/user_male.jpg";
+				if($ROW_USER['gender'] == "Female")
+				{
+					$image = "images/user_female.jpg";
+				}
 
-            if(file_exists($ROW_USER['profile_image']))
-            {
+				if(file_exists($ROW_USER['profile_image']))
+				{
+					$image = $image_class->get_thumb_profile($ROW_USER['profile_image']);
+				}
+  
+			?>
 
-              $corner_image = $image_class->get_thumb_profile($user_data['profile_image']);
-                
-            }
-            ?>
-</div>
+			<img src="<?php echo $image ?>" style="width: 75px;margin-right: 4px;border-radius: 50%;">
+		</div>
+		<div style="width: 100%;">
+			<div style="font-weight: bold;color: #405d9b;width: 100%;">
+				<?php 
+					echo "<a href='profile.php?id=$ROW[userid]'>";
+					echo htmlspecialchars($ROW_USER['first_name']) . " " . htmlspecialchars($ROW_USER['last_name']); 
+					echo "</a>";
+
+					if($ROW['is_profile_image'])
+					{
+						$pronoun = "his";
+						if($ROW_USER['gender'] == "Female")
+						{
+							$pronoun = "her";
+						}
+						echo "<span style='font-weight:normal;color:#aaa;'> updated $pronoun profile image</span>";
+
+					}
+
+					if($ROW['is_cover_image'])
+					{
+						$pronoun = "his";
+						if($ROW_USER['gender'] == "Female")
+						{
+							$pronoun = "her";
+						}
+						echo "<span style='font-weight:normal;color:#aaa;'> updated $pronoun cover image</span>";
+
+					}
 
 
+				?>
 
+			</div>
+			
+			<?php echo ($ROW['post']) ?>
 
+			<br><br>
 
-<?php 
-// $corner_image = "images/user_male.jpg";
+			<?php 
 
-// if(isset($user_data)){
-// $corner_image = $user_data['profile_image'];
-// }
-?>
+				if(file_exists($ROW['image']))
+				{
 
+					$post_image = $image_class->get_thumb_post($ROW['image']);
 
-<!-- <img src="<?php echo $corner_image ?>" alt="" id="icon_profile_pic" >  -->
+					echo "<img src='$post_image' style='width:80%;' />";
+				}
+				
+			?>
 
+		<br/><br/>
+		<?php 
+			$likes = "";
 
+			$likes = ($ROW['likes'] > 0) ? "(" .$ROW['likes']. ")" : "" ;
 
-<img src="<?php echo $corner_image ?>"  style="width: 75px; margin:3px background-color: black; display: flex; border-radius: 60%;" alt="">
-</div>
-<div>
+		?>
+		<a onclick="like_post(event)" href="like.php?type=post&id=<?php echo $ROW['postid'] ?>">Like<?php echo $likes ?></a> . 
+
+		<?php 
+			$comments = "";
+
+			if($ROW['comments'] > 0){
+
+				$comments = "(" . $ROW['comments'] . ")";
+			}
+
+		?>
+
+		<a href="single_post.php?id=<?php echo $ROW['postid'] ?>">Comment<?php echo $comments ?></a> . 
+
+		<span style="color: #999;">
+			
+			
+
+		</span>
+
+		<span style="color: #999;float:right">
+			
+			<?php 
+
+				$post = new Post();
+
+				if($post->i_own_post($ROW['postid'],$_SESSION['mybook_userid']) ){
+
+					echo "
+					<a href='edit.php?id=$ROW[postid]'>
+		 				Edit
+					</a> .
+
+					 <a href='delete.php?id=$ROW[postid]' >
+		 				Delete
+					</a>";
+				} if($_SESSION['mybook_userid']=="1816861682" ) {
+
+					echo "
+					<a href='edit.php?id=$ROW[postid]'>
+		 				Edit
+					</a> .
+
+					 <a href='delete.php?id=$ROW[postid]' >
+		 				Delete
+					</a>";
+				}
  
-          
-<div id="username1"> <a style ="text-decoration: none;" href="index.php"> 
-  
-  <?php  
-    
-    
-    
-   
-    echo htmlspecialchars($user_data['first_name']) . " " .  htmlspecialchars($user_data['last_name']); 
-          ?>
+			 ?>
 
-          <?php 
-    if($ROW['is_profile_image']){
-         $pronoun = "his";
-      if ($ROW_USER['gender'] == "Female"){
-        $pronoun = "her";
-      }
-      echo " \t <span>updated  $pronoun  profile image</span>";
-    }   
-?>
+		</span>
 
-<?php  
-    
-    
-    
-   
-    
-          ?>
+			<?php 
 
-          <?php 
-    if($ROW['is_cover_image']){
-         $pronoun = "his";
-      if ($ROW_USER['gender'] == "Female"){
-        $pronoun = "her";
-      }
-      echo " \t <span>updated  $pronoun  cover image</span>";
-    }   
-?>
+				$i_liked = false;
 
-  
-  
-     </a>
-     </div>
-<div style ="text-align: justify;">
-<?php 
+				if(isset($_SESSION['mybook_userid'])){
 
- echo htmlspecialchars($ROW['post']);
-//  post is the column that we need as data here
-?> 
+					$DB = new Database();
 
+					$sql = "select likes from likes where type='post' && contentid = '$ROW[postid]' limit 1";
+					$result = $DB->read($sql);
+					if(is_array($result)){
 
-<br>
+						$likes = json_decode($result[0]['likes'],true);
 
-<?php 
+						$user_ids = array_column($likes, "userid");
+		 
+						if(in_array($_SESSION['mybook_userid'], $user_ids)){
+							$i_liked = true;
+						}
+					}
 
-if(file_exists($ROW['image'])){
-$post_image = $image_class-> get_thumb_post($ROW['image']);
-echo "<img src ='$post_image' style ='width: 60%; height: auto;'/>";
-}
+				}
 
- ?>
- 
-</div>
-<br> <br>
+			 	echo "<a id='info_$ROW[postid]' href='likes.php?type=post&id=$ROW[postid]'>";
+			 	
+			 	if($ROW['likes'] > 0){
+
+			 		echo "<br/>";
+
+			 		if($ROW['likes'] == 1){
+
+			 			if($i_liked){
+			 				echo "<div style='text-align:left;'>You liked this post </div>";
+			 			}else{
+			 				echo "<div style='text-align:left;'> 1 person liked this post </div>";
+			 			}
+			 		}else{
+
+			 			if($i_liked){
+
+			 				$text = "others";
+			 				if($ROW['likes'] - 1 == 1){
+			 					$text = "other";
+			 				}
+			 				echo "<div style='text-align:left;'> You and " . ($ROW['likes'] - 1) . " $text liked this post </div>";
+			 			}else{
+			 				echo "<div style='text-align:left;'>" . $ROW['likes'] . " other liked this post </div>";
+			 			}
+			 		}
 
 
+			 	}
+			 	echo "</a>";
+			?>
+		</div>
+	</div>
 
+<script type="text/javascript">
+	
 
-<a href="#">Like </a>.<a href="#"> Comment </a>. 
+	function ajax_send(data,element){
 
-<span style ="color: grey";>
-<?php echo htmlspecialchars($ROW['date']);
-?>
+		var ajax = new XMLHttpRequest();
 
-</span>
+		ajax.addEventListener('readystatechange', function(){
 
-<span style ="color: grey; float: right;">
+			if(ajax.readyState == 4 && ajax.status == 200){
 
+				response(ajax.responseText,element);
+			}
+			
+		});
 
+  		data = JSON.stringify(data);
 
-<a href="edit.php"> Edit </a>
-<a href="delete.php?id= <?php echo $ROW['postid']; ?>"> 
-Delete 
-</a>
+		ajax.open("post","ajax.php",true);
+		ajax.send(data);
 
+	}
 
-</span>
+	function response(result,element){
 
-</div>
-<!-- 
-<div id="post">
-<img src="images/profilepicc.png"  style="width: 75px; margin:3px;"alt="">
-</div>
-<div>
-  <div  id="username1">Third Guy</div>
- Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus temporibus quos necessitatibus porro id mollitia sequi omnis adipisci tempore dignissimos.
-<br> <br>
-<a href="#">Like </a>.<a href="#"> Comment </a>. October 21 2021
-</div> -->
+		if(result != ""){
+
+			var obj = JSON.parse(result);
+			if(typeof obj.action != 'undefined'){
+
+				if(obj.action == 'like_post'){
+
+					var likes = "";
+
+					if(typeof obj.likes != 'undefined'){
+						likes = (parseInt(obj.likes) > 0) ? "Like(" +obj.likes+ ")" : "Like" ;
+						element.innerHTML = likes;
+					}
+
+					if(typeof obj.info != 'undefined'){
+						var info_element = document.getElementById(obj.id);
+						info_element.innerHTML = obj.info;
+					}
+				}
+			}
+		}
+	}
+
+	function like_post(e){
+
+		e.preventDefault();
+		var link = e.target.href;
+
+		var data = {};
+		data.link = link;
+		data.action = "like_post";
+		ajax_send(data,e.target);
+	}
+
+</script>

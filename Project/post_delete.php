@@ -1,141 +1,76 @@
 
-<div id="post">
-   
-<div>
+	<div id="post">
+		<div>
 		
-        <?php 
+			<?php 
 
-            $image = "images/user_male.jpg";
-            if($ROW_USER['gender'] == "Female")
-            {
-                $image = "images/user_female.jpg";
-            }
+				$image = "images/user_male.jpg";
+				if($ROW_USER['gender'] == "Female")
+				{
+					$image = "images/user_female.jpg";
+				}
 
-            if(file_exists($ROW_USER['profile_image']))
-            {
+				$image_class = new Image();
+				if(file_exists($ROW_USER['profile_image']))
+				{
+					$image = $image_class->get_thumb_profile($ROW_USER['profile_image']);
+				}
 
-              $corner_image = $image_class->get_thumb_profile($user_data['profile_image']);
-                
-            }
-            ?>
-</div>
-
-
-
-
-
-<?php 
-$corner_image = "images/user_male.jpg";
-
-if(isset($user_data)){
-$corner_image = $user_data['profile_image'];
-}
-?>
-
-
-<img src="<?php echo $corner_image ?>" alt="" id="icon_profile_pic" >  
-
-
-
-<img src="<?php echo $corner_image ?>"  style="width: 75px; margin:3px background-color: black; display: flex; border-radius: 60%;" alt="">
-</div>
-<div>
- 
-          
-<div id="username1"> <a style ="text-decoration: none;" href="index.php"> 
+			
   
-  <?php  
-    
-    
-    
-   
-    echo htmlspecialchars($user_data['first_name']) . " " .  htmlspecialchars($user_data['last_name']); 
-          ?>
+			?>
 
-          <?php 
-    if($ROW['is_profile_image']){
-         $pronoun = "his";
-      if ($ROW_USER['gender'] == "Female"){
-        $pronoun = "her";
-      }
-      echo " \t <span>updated  $pronoun  profile image</span>";
-    }   
-?>
+			<img src="<?php echo $image ?>" style="width: 75px;margin-right: 4px;border-radius: 50%;">
+		</div>
+		<div style="width: 100%;">
+			<div style="font-weight: bold;color: #405d9b;width: 100%;">
+				<?php 
 
-<?php  
-    
-    
-    
-   
-    
-          ?>
+					echo htmlspecialchars($ROW_USER['first_name']) . " " . htmlspecialchars($ROW_USER['last_name']); 
 
-          <?php 
-    if($ROW['is_cover_image']){
-         $pronoun = "his";
-      if ($ROW_USER['gender'] == "Female"){
-        $pronoun = "her";
-      }
-      echo " \t <span>updated  $pronoun  cover image</span>";
-    }   
-?>
+					if($ROW['is_profile_image'])
+					{
+						$pronoun = "his";
+						if($ROW_USER['gender'] == "Female")
+						{
+							$pronoun = "her";
+						}
+						echo "<span style='font-weight:normal;color:#aaa;'> updated $pronoun profile image</span>";
 
-  
-  
-     </a>
-     </div>
-<div style ="text-align: justify;">
-<?php 
+					}
 
- echo htmlspecialchars($ROW['post']);
-//  post is the column that we need as data here
-?> 
+					if($ROW['is_cover_image'])
+					{
+						$pronoun = "his";
+						if($ROW_USER['gender'] == "Female")
+						{
+							$pronoun = "her";
+						}
+						echo "<span style='font-weight:normal;color:#aaa;'> updated $pronoun cover image</span>";
+
+					}
 
 
-<br>
+				?>
+			</div>
+			
+			<?php echo htmlspecialchars($ROW['post']) ?>
 
-<?php 
+			<br><br>
 
-if(file_exists($ROW['image'])){
-$post_image = $image_class-> get_thumb_post($ROW['image']);
-echo "<img src ='$post_image' style ='width: 60%; height: auto;'/>";
-}
+			<?php 
 
- ?>
- 
-</div>
-<br> <br>
+				if(file_exists($ROW['image']))
+				{
 
+					$post_image = $image_class->get_thumb_post($ROW['image']);
 
-
-<!-- 
-<a href="#">Like </a>.<a href="#"> Comment </a>.  -->
-
-<span style ="color: grey";>
-<?php 
-// echo htmlspecialchars($ROW['date']);
-?>
-
-</span>
-
-<span style ="color: grey; float: right;">
+					echo "<img src='$post_image' style='width:80%;' />";
+				}
+				
+			?>
+  		
+		</div>
+	</div>
 
 
-<!-- 
-<a href="edit.php"> Edit </a> -->
-
-
-
-</span>
-
-</div>
-<!-- 
-<div id="post">
-<img src="images/profilepicc.png"  style="width: 75px; margin:3px;"alt="">
-</div>
-<div>
-  <div  id="username1">Third Guy</div>
- Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus temporibus quos necessitatibus porro id mollitia sequi omnis adipisci tempore dignissimos.
-<br> <br>
-<a href="#">Like </a>.<a href="#"> Comment </a>. October 21 2021
-</div> -->
