@@ -402,11 +402,11 @@
   <table>
   <tr>
     <td>Use Case</td>
-     <td colspan="2">Delete Profile</td> 
+     <td colspan="2">Delete Post</td> 
     </tr>
   <tr>
   <td> Short Description</td>
-    <td> Notification bar notifies user about the activities that other users did on their profile. For example: Like,comment and many more</td>
+    <td> Deleting unwanted posts </td>
 </tr>
   <tr>
   <td> Characters</td>
