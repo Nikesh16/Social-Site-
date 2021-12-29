@@ -217,9 +217,16 @@ background-position:right;
 #menu-buttons{
 
     width: 100px;
-    display: inline-block;
+    display: inline;
     margin: 2px;
+    
 
+}
+
+#menu_button{
+
+
+    
 }
 /* The default display of div is block. so we can change its display by display: inline */
 
