@@ -1,143 +1,275 @@
-<?php
+<?php 
 
-session_start();
+	include("classes/autoload.php");
+ 
 
-include("classes/autoload.php");
+	$login = new Login();
+	$user_data = $login->check_login($_SESSION['mybook_userid']);
+ 
+ 	$USER = $user_data;
+ 	
+ 	if(isset($_GET['id']) && is_numeric($_GET['id'])){
 
+	 	$profile = new Profile();
+	 	$profile_data = $profile->get_profile($_GET['id']);
 
+	 	if(is_array($profile_data)){
+	 		$user_data = $profile_data[0];
+	 	}
 
-$login = new Login();
-$user_data = $login->check_login($_SESSION['mybook_userid']);
+ 	}
 
+  
+	//posting starts here
+	if($_SERVER['REQUEST_METHOD'] == "POST")
+	{
 
+		$post = new Post();
+		$id = $_SESSION['mybook_userid'];
+		$result = $post->create_post($id, $_POST,$_FILES);
+		
+		if($result == "")
+		{
+			header("Location: index.php");
+			die;
+		}else
+		{
 
+			echo "<div style='text-align:center;font-size:12px;color:white;background-color:grey;'>";
+			echo "<br>The following errors occured:<br><br>";
+			echo $result;
+			echo "</div>";
+		}
+	}
 
 ?>
-
-
-
-
 
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile | Mybook</title>
-    <link rel="stylesheet" href="styleprofile.css">
+	<html>
+	<head>
+		<title>Profile | Mybook</title>
+		
+	</head>
 
-</head>
-<body >
+	<style type="text/css">
+		
+		#blue_bar{
 
+			height: 50px;
+			background-color: #405d9b;
+			color: #d9dfeb;
 
-<!-- Top bar -->
+		}
 
-<?php
-include("header.php");
+		#search_box{
 
-?>
+			width: 400px;
+			height: 20px;
+			border-radius: 5px;
+			border:none;
+			padding: 4px;
+			font-size: 14px;
+			background-image: url(search.png);
+			background-repeat: no-repeat;
+			background-position: right;
 
+		}
 
-  <!-- cover area -->
+		#profile_pic{
 
-<div style="width: 800px; margin: auto; background-color: black; min-height: 400px">
-<div style="
-background-color: white; text-align: center; color: #305d9b">
-<img src="images/dolpa.jpg" alt="" style="width:100%">
+			width: 150px;
+			border-radius: 50%;
+			border:solid 2px white;
+		}
 
-<br>
+		#menu_buttons{
 
-<br>
-<b>
-  
-  <div id="menu-buttons"> About  </div>
-  <div id="menu-buttons">Friends  </div>
-  <div id="menu-buttons">Photos  </div>
-  <div id="menu-buttons">Settings</b> </div>
+			width: 100px;
+			display: inline-block;
+			margin:2px;
+		}
 
+		#friends_img{
 
-<!-- below cover area -->
-<div style="display:flex;">
+			width: 75px;
+			float: left;
+			margin:8px;
 
-<!-- friends area -->
+		}
 
+		#friends_bar{
 
-<div style="min-height: 400px; flex: 1;">
+			min-height: 400px;
+			margin-top: 20px;
+			padding: 8px;
+			text-align: center;
+			font-size: 20px;
+			color: #405d9b;
+		}
 
- <div id="friends-bar" style="height: 500px;">
-   
-  Friends
-   <!--friend area  -->
-   <img  style ="display:inline;" id = "profilepicc" src="images/user_female.jpg" alt="">
-   <div id="username"><a style =" text-decoration: none;" href="profile.php"><?php echo $user_data['first_name'] . "<br> " . $user_data['last_name']; ?> </a> </div>
-<!-- br tag because some people may have long name -->
- </div>
+		#friends{
+
+		 	clear: both;
+		 	font-size: 12px;
+		 	font-weight: bold;
+		 	color: #405d9b;
+		}
+
+		textarea{
+
+			width: 100%;
+			border:none;
+			font-family: tahoma;
+			font-size: 14px;
+			height: 60px;
+
+		}
+
+		#post_button{
+
+			float: right;
+			background-color: #405d9b;
+			border:none;
+			color: white;
+			padding: 4px;
+			font-size: 14px;
+			border-radius: 2px;
+			width: 50px;
+			cursor: pointer;
+		}
  
-</div> 
+ 		#post_bar{
 
+ 			margin-top: 20px;
+ 			background-color: white;
+ 			padding: 10px;
+ 		}
 
-<!-- post area -->
-<div style=" min-height: 400px; flex: 2.5; padding: 20px; padding-right: 0px;">
+ 		#post{
 
-<div>
+ 			padding: 4px;
+ 			font-size: 13px;
+ 			display: flex;
+ 			margin-bottom: 20px;
+ 		}
 
-<textarea placeholder=" Whats on your mind?"></textarea>
-<input id="post-button" type="submit" value="Post">
-<br>
-</div>
+	</style>
 
-<!-- posts -->
-<div id="post-bar">
-<div id="post">
-<img src="images/profilepicc.png"  style="width: 75px; margin:3px;"alt="">
-</div>
-<div>
-<div id="username1">First Guy</div>
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus temporibus quos necessitatibus porro id mollitia sequi omnis adipisci tempore dignissimos.
-<br> <br>
-<a href="#">Like </a>.<a href="#"> Comment </a>. October 21 2021
-</div>
+	<body style="font-family: tahoma; background-color: #d0d8e4;">
 
-<div id="post">
-<img src="images/profilepicc.png"  style="width: 75px; margin:3px;"alt="">
-</div>
-<div>
-  <div  id="username1">Second Guy</div>
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus temporibus quos necessitatibus porro id mollitia sequi omnis adipisci tempore dignissimos.
-<br> <br>
-<a href="#">Like </a>.<a href="#"> Comment </a>. October 21 2021
-</div>
+		<br>
+		<?php include("header.php"); ?>
 
-<div id="post">
-<img src="images/profilepicc.png"  style="width: 75px; margin:3px;"alt="">
-</div>
-<div>
-  <div  id="username1">Third Guy</div>
- Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus temporibus quos necessitatibus porro id mollitia sequi omnis adipisci tempore dignissimos.
-<br> <br>
-<a href="#">Like </a>.<a href="#"> Comment </a>. October 21 2021
-</div>
+		<!--cover area-->
+		<div style="width: 800px;margin:auto;min-height: 400px;">
+			
+			 
+			<!--below cover area-->
+			<div style="display: flex;">	
 
+				<!--friends area-->			
+				<div style="min-height: 400px;flex:1;">
+					
+					<div id="friends_bar">
+						
+						 <?php 
 
-</div>
+							$image = "images/user_male.jpg";
+							if($user_data['gender'] == "Female")
+							{
+								$image = "images/user_female.jpg";
+							}
+							if(file_exists($user_data['profile_image']))
+							{
+								$image = $image_class->get_thumb_profile($user_data['profile_image']);
+							}
+						?>
 
+					<img id="profile_pic" src="<?php echo $image ?>"><br/>
 
+						<a href="profile.php" style="text-decoration: none;"> 
+						 <?php echo $user_data['first_name'] . "<br> " . $user_data['last_name'] ?>
+						</a>
 
+					</div>
 
+				</div>
 
+				<!--posts area-->
+ 				<div style="min-height: 400px;flex:2.5;padding: 20px;padding-right: 0px;">
+ 					
+ 					<div style="border:solid thin #aaa; padding: 10px;background-color: white;">
 
+ 						<form method="post" enctype="multipart/form-data">
 
-</div>
+	 						<textarea name="post" placeholder="Whats on your mind?"></textarea>
+	 						<input type="file" name="file">
+	 						<input id="post_button" type="submit" value="Post">
+	 						<br>
+ 						</form>
+ 					</div>
+ 
+	 				<!--posts-->
+	 				<div id="post_bar">
+ 					
+ 						<?php 
 
+ 							// $page_number = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+  							// $page_number = ($page_number < 1) ? 1 : $page_number;
 
+ 							
+ 							// $limit = 10;
+ 							// $offset = ($page_number - 1) * $limit;
 
+  							$DB = new Database();
+ 							$user_class = new User();
+ 							$image_class = new Image();
 
-</div>
-</div>
+ 							$followers = $user_class->get_following($_SESSION['mybook_userid'],"user");
 
+ 							$follower_ids = false;
+ 							if(is_array($followers)){
 
+ 								$follower_ids = array_column($followers, "userid");
+ 								$follower_ids = implode("','", $follower_ids);
 
+ 							}
 
-</body>
+ 							if($follower_ids){
+ 								$myuserid = $_SESSION['mybook_userid'];
+ 								$sql = "select * from posts where parent = 0 and (userid = '$myuserid' || userid in('" .$follower_ids. "')) order by id desc limit 10";
+ 								$posts = $DB->read($sql);
+ 							}
+
+ 	 					 	if(isset($posts) && $posts)
+ 	 					 	{
+
+ 	 					 		foreach ($posts as $ROW) {
+ 	 					 			# code...
+
+ 	 					 			$user = new User();
+ 	 					 			$ROW_USER = $user->get_user($ROW['userid']);
+
+ 	 					 			include("post.php");
+ 	 					 		}
+ 	 					 	}
+ 	 			 
+ 	 					 	//get current url
+ 							// $pg = pagination_link();
+ 
+	 					 ?>
+	 					 <!-- <a href="<?= $pg['next_page'] ?>">
+	 					 <input id="post_button" type="button" value="Next Page" style="float: right;width:150px;">
+	 					 </a>
+	 					 <a href="<?= $pg['prev_page'] ?>">
+	 					 <input id="post_button" type="button" value="Prev Page" style="float: left;width:150px;"> -->
+	 					 </a>
+	 				</div>
+
+ 				</div>
+			</div>
+
+		</div>
+
+	</body>
 </html>
