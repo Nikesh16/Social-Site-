@@ -1,20 +1,20 @@
-<?php
+<?php 
+
 session_start();
-include("classes/connect.php");
-include('classes/login.php');
 
-
-$email ="";
-$password="";
-  if($_SERVER['REQUEST_METHOD'] == 'POST')
+	include("classes/connect.php");
+	include("classes/login.php");
+ 
+	$email = "";
+	$password = "";
+	
+	if($_SERVER['REQUEST_METHOD'] == 'POST')
 	{
+
+
 		$login = new Login();
-		$result = $login->evaluates($_POST);
-
+		$result = $login->evaluate($_POST);
 		
-		
-
-    
 		if($result != "")
 		{
 
@@ -32,39 +32,35 @@ $password="";
 
 		$email = $_POST['email'];
 		$password = $_POST['password'];
-		
-
-	}
-
-
-	
-
-// $_POST is variable of php to access method post
+			}
 ?>
 
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mybook | Log in</title>
-    <link rel="stylesheet" href="style.css"></link>
+	<title>SocialHood</title>
+	<link rel="stylesheet" type="text/css" href="slidelogin.css">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-<div id="view">
-   <div style="font-size:50px;">Mybook</div>
-   <!-- <div id="signup_button">  <a href=  "signup.php"> Signup  </div> -->
-  </div>
-  <div class="box">
+	<div class="main">  	
+		<input type="checkbox" id="chk" aria-hidden="true">
 
-  <div id="view2"> <a href="signup.php"> SignUp to Mybook</a></div>
-  <form method ="POST">
-      <!--  if we dont specify the method, it will use get method by default -->
-      <input name="email" value="<?php echo $email ?>" type="text" id="text" placeholder="Email"><br><br>
-      <input name ="password" value="<?php echo $password?>" type="password" name="password" id="text" placeholder="Password"><br><br>
-      <input type="submit" id="button" value="Log in">
-  </form>
-</div>
+			<div class="signup">
+
+
+			<form method="post">
+ 
+					<label for="chk" aria-hidden="true">Login</label>
+					<input name="email" value="<?php echo $email ?>" type="text" id="text" placeholder="Email">
+				<input name="password" value="<?php echo $password ?>" type="password" id="text" placeholder="Password">
+					<button>Login </button>
+				</form>
+				<h2 style="color:white;"> <span style="color:red;"> Don't have an Account?</h2>
+       <a id="loginbtm" href="signup.php">Sign Up	 </a>
+			</div>
+	</div>
 </body>
 </html>
