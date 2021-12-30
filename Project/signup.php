@@ -1,95 +1,95 @@
 <?php
-include ("classes/connect.php");
-include ("classes/signup.php");
-$first_name ="";
-$last_name="";
-$gender="";
-$email="";
-if($_SERVER['REQUEST_METHOD']== 'POST'){
- // $_SERVER is actually used to change the method from get to post after clicking on sign up button
- // server is used to check the post
- //$_SERVER consists of all data from our system.
- // The method is get, but changes to post when we click on sign up
-// Inside $_SERVER we can add $_POST to check what he/she entered
-$signup = new  Signup();
-$result =  $signup->evaluates($_POST);
-echo "<div style ='text-align:center; font-size:12px;color:white; background-color:grey;>";
-  echo "The following errors occurded<br>";
-  echo $result;
-print_r($result);
-if($result != ""){
-  echo "<div style ='text-align:center; font-size:12px;color:white; background-color:grey;>";
-  echo "The following errors occurded<br>";
-  echo $result;
- echo "</div>";
+class Signup{
+private $error = "";
+    public function evaluates($data){
+        foreach ($data as $key => $value){
+                // $key is the value we enter
+            if(empty($value)){
+              $this->  error = $this-> error .  $key . "is empty!<br> ";   
+        }
+            if($key == "email"){
+                if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/",$value)) {
+                    $this->error = $this->error . "invalid email address!<br>";
+               }
+                     // checking if its empty
+             }
+        if($key == "first_name"){
+           if(is_numeric($value)){
+               $this->error = $this-> error . "First name cannot be a number <br>";
+           }
+
+           if(strstr($value, " ")){
+            $this->error = $this-> error . "First name cannot have an empty space<br>";
+        }
+
+    } if($key == "last_name")
+			{
+				if (is_numeric($value)) {
+        
+ 					$this->error = $this->error . "last name cant be a number<br>";
+    			}
+
+    			if (strstr($value, " ")) {
+        
+ 					$this->error = $this->error . "last name cant have spaces<br>";
+    			}
+			}
+        }
+		$data['userid'] = $this->create_userid();
+		//check userid
+		$sql = "select id from users where userid = '$data[userid]' limit 1";
+		$check = $DB->read($sql);
+		while(is_array($check)){
+
+			$data['userid'] = $this->create_userid();
+			$sql = "select id from users where userid = '$data[userid]' limit 1";
+			$check = $DB->read($sql);
+		}
+        	//check email
+		$sql = "select id from users where email = '$data[email]' limit 1";
+		$check = $DB->read($sql);
+		if(is_array($check)){
+			 $this->error = $this->error . "Another user is already using that email<br>";
+		}
+        // if there is no error, we now allow to create user
+		if($this->error == "")
+		{
+			//no error
+			$this->create_user($data);
+		}else
+		{
+			return $this->error;
+		}
+	}
+ // $data will be an array because the $_POST is an array
+   public  function create_user($data){
+    $first_name = ucfirst($data['first_name']);
+    $last_name = ucfirst($data['last_name']);
+     // makes first letter capital
+    $gender = $data["gender"];
+    $email=addsLashes($data["email"]);
+    $password=$data["password"];
+    $userid= $data['userid'];
+// not available so , need to create it
+    $url_address = strtolower($first_name) . "."  . strtolower($last_name);
+    $userid = $this->create_userid();
+    $query = "insert into users 
+    (userid,first_name,last_name,gender,email,password,url_address) 
+    values 
+    ('$userid','$first_name','$last_name','$gender','$email','$password','$url_address')";
+     $DB = new Database();
+    $DB-> save($query);
+    }
+    //its private because its only used here
+    private function create_userid(){
+        //creating a random userid 
+        $length = rand(4,19);
+        $number = "";
+        for($i = 0; $i < $length; $i++){
+            $new_rand = rand(0,9);
+             $number = $number . $new_rand;    
+        }
+        return $number;
+    }
 }
-else {
-header("Location: login.php");
-die;
- //die is a way of telling to end the header
-   // redirection must be done before the html part
-}
-$first_name =$_POST['first_name'];
-$last_name=$_POST['last_name'];
-$gender=$_POST['gender'];
-$email=$_POST['email'];
-$password= $_POST['password'];
-$password2=$_POST['password2'];
-if ($password === $password2) {
-}
-else {
-  echo "Your passwords donot match please try again";
-}
-}
-// $_POST is variable of php to access method post
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Sign Up</title>
-	<link rel="stylesheet" type="text/css" href="slidelogin.css">
-<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
-</head>
-<body>
-	<div class="main">  
- 
-		<input type="checkbox" id="chk" aria-hidden="true">
-
-			<div class="signup">
-      <img  style = "width: 30%; background: white; text-align: center; margin-left: 120px; "src="logo_transparent.png">
-  <form action="signup.php" method="POST">      
-        <label for="chk" aria-hidden="true" style="text-align: center; margin: 0;">Sign up</label>
-    <!-- action is for redirection  -->
-  <input value="<?php  echo $first_name  ?>" name = "first_name" type="text" id="text" placeholder="First Name" >
-  <input value="<?php  echo $last_name  ?>" name ="last_name" type="text" id="text" placeholder="Last Name" >
-  <input value="<?php  echo $email  ?>"  name="email" type="email" id="text" placeholder="Email" >
- 
-  <b style="color:white;">Gender:</b>
-  <select style="width: 225px;" name="gender" id="text" value="Gender" >
-  <option> <?php echo $gender ?></option>
-  
-  <option >Male</option>
-  <option>Female</option>
-  </select>
-
-  <input type="password" name="password" id="text" placeholder="Password" >
-  <input type="password" name="password2" id="text" placeholder="Confirm Password">
-  <button>Sign up</button>
-  <!-- <input type="submit" id="button" value="Register"> -->
-
-
-					
-  	</form>
-       <h2 style="color:white;"><span style="color:white;"> Already have an Account?</h2>
-       <a id="loginbtm" href="login.php">Login </a> 
-      
-     
-     
-      </div>
-     
-			
-	</div>
-</body>
-</html>
-
- 

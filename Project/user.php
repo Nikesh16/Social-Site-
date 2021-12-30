@@ -1,25 +1,77 @@
+<?php 
+class User
+{
+	public function get_data($id)
+	{
 
-<div id="friends" style="display: inline-block;">
-	<?php 
-
-		$image = "images/user_male.jpg";
-		if($FRIEND_ROW['gender'] == "Female")
-		{
-			$image = "images/user_female.jpg";
-		}
-
-		if(file_exists($FRIEND_ROW['profile_image']))
-		{
-			$image = $image_class->get_thumb_profile($FRIEND_ROW['profile_image']);
-		}
- 
-
-	?>
-
-	<a href="profile.php?id=<?php echo $FRIEND_ROW['userid']; ?>">
- 		<img id="friends_img" src="<?php echo $image ?>">
-		<br>
+		$query = "select * from users where userid = '$id' limit 1";
 		
-		<?php echo $FRIEND_ROW['first_name'] . " " . $FRIEND_ROW['last_name'] ?>
- 	</a>
-</div>
+		$DB = new Database();
+		$result = $DB->read($query);
+
+		if($result)
+		{
+
+			$row = $result[0];
+			return $row;
+		}else
+		{
+			return false;
+		}
+	}
+	public function get_user($id)
+	{
+
+		$query = "select * from users where userid = '$id' limit 1";
+		$DB = new Database();
+		$result = $DB->read($query);
+
+		if($result)
+		{
+			return $result[0];
+		}else
+		{
+
+			return false;
+		}
+	}
+
+	public function get_friends($id)
+	{
+		$query = "select * from users where userid != '$id' ";
+		$DB = new Database();
+		$result = $DB->read($query);
+
+		if($result)
+		{
+			return $result;
+		}else
+		{
+
+			return false;
+		}
+	}
+
+
+	public function get_following($id,$type){
+		$DB = new Database();
+		$type = addslashes($type);
+
+		if(is_numeric($id)){
+ 
+			//get following details
+			$sql = "select following from likes where type='$type' && contentid = '$id' limit 1";
+			$result = $DB->read($sql);
+			if(is_array($result)){
+
+				$following = json_decode($result[0]['following'],true);
+				return $following;
+			}
+		}
+
+
+		return false;
+	}
+
+	
+}

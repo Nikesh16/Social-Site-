@@ -1,66 +1,71 @@
-<?php 
+<?php
+class Login{
+private $error="";
+public  function evaluate($data){
+    $email="";  
+     // makes first letter capital
+    $email=addsLashes($data["email"]);    // addslashes is use for removing slashes
+    // like jon\s home here \ is removed
+    $password=addsLashes($data["password"]);
+     $query = "SELECT * FROM users  where email='$email' limit 1";
+       $DB = new Database();
+       $result  =$DB->read($query);
+    if($result){
+        $row = $result[0];   // row is the result of data and  1st result is given to it
+            if($password == $row['password']){
+            //create a session data
+            $_SESSION['mybook_userid'] = $row['userid'];  //Session is used to maintain info. if we have logged in , we can still login because session identifies the browser  
+                  //its actually an array of an informations
 
-session_start();
+        } else {
 
-	include("classes/connect.php");
-	include("classes/login.php");
- 
-	$email = "";
-	$password = "";
-	
-	if($_SERVER['REQUEST_METHOD'] == 'POST')
+            $this->error .= " Wrong Password/email<br>"; // to stay away from hackers
+        }
+
+    }   else {
+        $this-> error .= "no such Password/Email";   // to stay away from hackers
+    } 
+    return $this->error; 
+    }
+    private function password_hash($text){
+        $text = hash("md5", $text);
+        return $text;
+
+    }
+    public function check_login($id,$redirect = true)
 	{
 
-
-		$login = new Login();
-		$result = $login->evaluate($_POST);
-		
-		if($result != "")
+        if(is_numeric($id))
 		{
+            $query = "select * from users where userid = '$id' limit 1 ";
+            $DB= new Database();
+            $result = $DB-> read($query);
+        // check if user is logged in
+          // check userid and if its numeric or not
+         
 
-			echo "<div style='text-align:center;font-size:12px;color:white;background-color:grey;'>";
-			echo "<br>The following errors occured:<br><br>";
-			echo $result;
-			echo "</div>";
+            if($result){
+                $user_data = $result[0];
+                return $user_data;
+                
+            } else
+			{
+			if($redirect){
+				header("Location: login.php");
+				die;
+			}else{
+                $_SESSION['mybook_userid'] = 0;
+				}
+			}
+ 	 
 		}else
 		{
-
-			header("Location: profile.php");
-			die;
-		}
- 
-
-		$email = $_POST['email'];
-		$password = $_POST['password'];
+			if($redirect){
+				header("Location: login.php");
+				die;
+			}else{
+				$_SESSION['mybook_userid'] = 0;
 			}
-?>
-
-
-
-<!DOCTYPE html>
-<html>
-<head>
-	<title>SocialHood</title>
-	<link rel="stylesheet" type="text/css" href="slidelogin.css">
-<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
-</head>
-<body>
-	<div class="main">  	
-		<input type="checkbox" id="chk" aria-hidden="true">
-
-			<div class="signup">
-
-
-			<form method="post">
- 
-					<label for="chk" aria-hidden="true">Login</label>
-					<input name="email" value="<?php echo $email ?>" type="text" id="text" placeholder="Email">
-				<input name="password" value="<?php echo $password ?>" type="password" id="text" placeholder="Password">
-					<button>Login </button>
-				</form>
-				<h2 style="color:white;"> <span style="color:red;"> Don't have an Account?</h2>
-       <a id="loginbtm" href="signup.php">Sign Up	 </a>
-			</div>
-	</div>
-</body>
-</html>
+		}
+	}
+}

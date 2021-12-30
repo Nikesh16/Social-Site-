@@ -1,246 +1,476 @@
-	<div id="post">
-		<div>
-		
-			<?php 
+<?php 
 
-				$image = "images/user_male.jpg";
-				if($ROW_USER['gender'] == "Female")
+class Post
+{
+	private $error = "";
+
+	public function create_post($userid, $data, $files)
+	{
+
+
+		if(!empty($data['post']) || !empty($files['file']['name']) || isset($data['is_profile_image']) || isset($data['is_cover_image']))
+		{
+
+			$myimage = "";
+			$has_image = 0;
+			$is_cover_image = 0;
+			$is_profile_image = 0;
+
+			if(isset($data['is_profile_image']) || isset($data['is_cover_image']))
+			{
+
+				$myimage = $files;
+				$has_image = 1;
+
+				if(isset($data['is_cover_image']))
 				{
-					$image = "images/user_female.jpg";
+					$is_cover_image = 1;
 				}
 
-				if(file_exists($ROW_USER['profile_image']))
+				if(isset($data['is_profile_image']))
 				{
-					$image = $image_class->get_thumb_profile($ROW_USER['profile_image']);
+					$is_profile_image = 1;
 				}
-  
-			?>
+			}else
+			{
 
-			<img src="<?php echo $image ?>" style="width: 75px;margin-right: 4px;border-radius: 50%;">
-		</div>
-		<div style="width: 100%;">
-			<div style="font-weight: bold;color: #405d9b;width: 100%;">
-				<?php 
-					echo "<a href='profile.php?id=$ROW[userid]'>";
-					echo htmlspecialchars($ROW_USER['first_name']) . " " . htmlspecialchars($ROW_USER['last_name']); 
-					echo "</a>";
+				if(!empty($files['file']['name']))
+				{
 
-					if($ROW['is_profile_image'])
-					{
-						$pronoun = "his";
-						if($ROW_USER['gender'] == "Female")
+
+					$folder = "uploads/" . $userid . "/";
+
+						//create folder
+						if(!file_exists($folder))
 						{
-							$pronoun = "her";
+
+							mkdir($folder,0777,true);
+							file_put_contents($folder . "index.php", "");
 						}
-						echo "<span style='font-weight:normal;color:#aaa;'> updated $pronoun profile image</span>";
+					
+					$allowed[] = "image/jpeg";
 
+					if(in_array($files['file']['type'], $allowed)){
+
+						$image_class = new Image();
+
+						$myimage = $folder . $image_class->generate_filename(15) . ".jpg";
+						move_uploaded_file($files['file']['tmp_name'], $myimage);
+
+						$image_class->resize_image($myimage,$myimage,1500,1500);
+
+						$has_image = 1;
+					}else{
+
+						$this->error .= "The selected image is not a valid type. only jpegs allowed!<br>";
 					}
-
-					if($ROW['is_cover_image'])
-					{
-						$pronoun = "his";
-						if($ROW_USER['gender'] == "Female")
-						{
-							$pronoun = "her";
-						}
-						echo "<span style='font-weight:normal;color:#aaa;'> updated $pronoun cover image</span>";
-
-					}
-
-
-				?>
-
-			</div>
-			
-			<?php echo ($ROW['post']) ?>
-
-			<br><br>
-
-			<?php 
-
-				if(file_exists($ROW['image']))
-				{
-
-					$post_image = $image_class->get_thumb_post($ROW['image']);
-
-					echo "<img src='$post_image' style='width:80%;' />";
 				}
-				
-			?>
-
-		<br/><br/>
-		<?php 
-			$likes = "";
-
-			$likes = ($ROW['likes'] > 0) ? "(" .$ROW['likes']. ")" : "" ;
-
-		?>
-		<a onclick="like_post(event)" href="like.php?type=post&id=<?php echo $ROW['postid'] ?>">Like<?php echo $likes ?></a> . 
-
-		<?php 
-			$comments = "";
-
-			if($ROW['comments'] > 0){
-
-				$comments = "(" . $ROW['comments'] . ")";
 			}
 
-		?>
+			$post = "";
+			if(isset($data['post'])){
 
-		<a href="single_post.php?id=<?php echo $ROW['postid'] ?>">Comment<?php echo $comments ?></a> . 
+				$post = addslashes($data['post']);
+			}
 
-		<span style="color: #999;">
-			
-			
+			//add tagged users
+			$tags = array();
+			// $tags = get_tags($post);
+			$tags = json_encode($tags);
 
-		</span>
+			if($this->error == ""){
 
-		<span style="color: #999;float:right">
-			
-			<?php 
+				$postid = $this->create_postid();
+				$parent = 0;
+				$DB = new Database();
 
-				$post = new Post();
+				if(isset($data['parent']) && is_numeric($data['parent'])){
 
-				if($post->i_own_post($ROW['postid'],$_SESSION['mybook_userid']) ){
+					$parent = $data['parent'];
+					$mypost = $this->get_one_post($data['parent']);
 
-					echo "
-					<a href='edit.php?id=$ROW[postid]'>
-		 				Edit
-					</a> .
+					if(is_array($mypost) && $mypost['userid'] != $userid){
+						
+						//follow this item
+						content_i_follow($userid,$mypost);
 
-					 <a href='delete.php?id=$ROW[postid]' >
-		 				Delete
-					</a>";
-				} if($_SESSION['mybook_userid']=="1816861682" ) {
-
-					echo "
-					<a href='edit.php?id=$ROW[postid]'>
-		 				Edit
-					</a> .
-
-					 <a href='delete.php?id=$ROW[postid]' >
-		 				Delete
-					</a>";
-				}
- 
-			 ?>
-
-		</span>
-
-			<?php 
-
-				$i_liked = false;
-
-				if(isset($_SESSION['mybook_userid'])){
-
-					$DB = new Database();
-
-					$sql = "select likes from likes where type='post' && contentid = '$ROW[postid]' limit 1";
-					$result = $DB->read($sql);
-					if(is_array($result)){
-
-						$likes = json_decode($result[0]['likes'],true);
-
-						$user_ids = array_column($likes, "userid");
-		 
-						if(in_array($_SESSION['mybook_userid'], $user_ids)){
-							$i_liked = true;
-						}
+						//add notification
+						add_notification($_SESSION['mybook_userid'],"comment",$mypost);
 					}
 
+					$sql = "update posts set comments = comments + 1 where postid = '$parent' limit 1";
+					$DB->save($sql);
 				}
 
-			 	echo "<a id='info_$ROW[postid]' href='likes.php?type=post&id=$ROW[postid]'>";
-			 	
-			 	if($ROW['likes'] > 0){
+				$query = "insert into posts (userid,postid,post,image,has_image,is_profile_image,is_cover_image,parent,tags) values ('$userid','$postid','$post','$myimage','$has_image','$is_profile_image','$is_cover_image','$parent','$tags')";
+				$DB->save($query);
 
-			 		echo "<br/>";
+				//notify those that were tagged
+				// tag($postid);
 
-			 		if($ROW['likes'] == 1){
-
-			 			if($i_liked){
-			 				echo "<div style='text-align:left;'>You liked this post </div>";
-			 			}else{
-			 				echo "<div style='text-align:left;'> 1 person liked this post </div>";
-			 			}
-			 		}else{
-
-			 			if($i_liked){
-
-			 				$text = "others";
-			 				if($ROW['likes'] - 1 == 1){
-			 					$text = "other";
-			 				}
-			 				echo "<div style='text-align:left;'> You and " . ($ROW['likes'] - 1) . " $text liked this post </div>";
-			 			}else{
-			 				echo "<div style='text-align:left;'>" . $ROW['likes'] . " other liked this post </div>";
-			 			}
-			 		}
-
-
-			 	}
-			 	echo "</a>";
-			?>
-		</div>
-	</div>
-
-<script type="text/javascript">
-	
-
-	function ajax_send(data,element){
-
-		var ajax = new XMLHttpRequest();
-
-		ajax.addEventListener('readystatechange', function(){
-
-			if(ajax.readyState == 4 && ajax.status == 200){
-
-				response(ajax.responseText,element);
 			}
-			
-		});
+		}else
+		{
+			$this->error .= "Please type something to post!<br>";
+		}
 
-  		data = JSON.stringify(data);
-
-		ajax.open("post","ajax.php",true);
-		ajax.send(data);
-
+		return $this->error;
 	}
 
-	function response(result,element){
+	public function edit_post($data, $files)
+	{
 
-		if(result != ""){
+		if(!empty($data['post']) || !empty($files['file']['name']))
+		{
 
-			var obj = JSON.parse(result);
-			if(typeof obj.action != 'undefined'){
+			$myimage = "";
+			$has_image = 0;
 
-				if(obj.action == 'like_post'){
+ 				if(!empty($files['file']['name']))
+				{
 
-					var likes = "";
 
-					if(typeof obj.likes != 'undefined'){
-						likes = (parseInt(obj.likes) > 0) ? "Like(" +obj.likes+ ")" : "Like" ;
-						element.innerHTML = likes;
-					}
+					$folder = "uploads/" . $userid . "/";
 
-					if(typeof obj.info != 'undefined'){
-						var info_element = document.getElementById(obj.id);
-						info_element.innerHTML = obj.info;
-					}
+						//create folder
+						if(!file_exists($folder))
+						{
+
+							mkdir($folder,0777,true);
+							file_put_contents($folder . "index.php", "");
+						}
+
+						$image_class = new Image();
+
+						$myimage = $folder . $image_class->generate_filename(15) . ".jpg";
+						move_uploaded_file($_FILES['file']['tmp_name'], $myimage);
+
+						$image_class->resize_image($myimage,$myimage,1500,1500);
+
+					$has_image = 1;
 				}
+ 
+			$post = "";
+			if(isset($data['post'])){
+
+				$post = addslashes($data['post']);
 			}
+
+			$postid = addslashes($data['postid']);
+
+			if($has_image){
+				$query = "update posts set post = '$post', image = '$myimage' where postid = '$postid' limit 1";
+			}else{
+				$query = "update posts set post = '$post' where postid = '$postid' limit 1";
+			}
+
+			//notify those that were tagged
+			// tag($postid, $post);
+
+			$DB = new Database();
+			$DB->save($query);
+
+		}else
+		{
+			$this->error .= "Please type something to post!<br>";
+		}
+
+		return $this->error;
+	}
+
+	
+
+	public function get_posts($id)
+	{
+
+		$page_number = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+  		$page_number = ($page_number < 1) ? 1 : $page_number;
+
+		$limit = 10;
+ 		$offset = ($page_number - 1) * $limit;
+
+		$query = "select * from posts where parent = 0 and userid = '$id' order by id desc limit 20 offset $offset";
+
+		$DB = new Database();
+		$result = $DB->read($query);
+
+		if($result)
+		{
+			return $result;
+		}else
+		{
+			return false;
 		}
 	}
 
-	function like_post(e){
 
-		e.preventDefault();
-		var link = e.target.href;
+	public function get_comments($id)
+	{
 
-		var data = {};
-		data.link = link;
-		data.action = "like_post";
-		ajax_send(data,e.target);
+		$page_number = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+  		$page_number = ($page_number < 1) ? 1 : $page_number;
+
+		$limit = 10;
+ 		$offset = ($page_number - 1) * $limit;
+
+		$query = "select * from posts where parent = '$id' order by id asc limit $limit offset $offset";
+
+		$DB = new Database();
+		$result = $DB->read($query);
+
+		if($result)
+		{
+			return $result;
+		}else
+		{
+			return false;
+		}
 	}
 
-</script>
+	public function get_one_post($postid)
+	{
+
+		if(!is_numeric($postid)){
+
+			return false;
+		}
+
+		$query = "select * from posts where postid = '$postid' limit 1";
+
+		$DB = new Database();
+		$result = $DB->read($query);
+
+		if($result)
+		{
+			return $result[0];
+		}else
+		{
+			return false;
+		}
+	}
+
+
+	public function delete_post($postid)
+	{
+
+		if(!is_numeric($postid)){
+			
+			return false;
+		}
+
+		$Post = new Post();
+		$one_post = $Post->get_one_post($postid);
+
+		$DB = new Database();
+		$sql = "select parent from posts where postid = '$postid' limit 1";
+		$result = $DB->read($sql);
+		
+		if(is_array($result)){
+
+			if($result[0]['parent'] > 0){
+
+				$parent = $result[0]['parent'];
+
+				$sql = "update posts set comments = comments - 1 where postid = '$parent' limit 1";
+				$DB->save($sql);
+			}
+		}
+			
+
+		$query = "delete from posts where postid = '$postid' limit 1";
+		$DB->save($query);
+
+		//delete any images and thumbnails
+		if($one_post['image'] != "" && file_exists($one_post['image']))
+		{
+			unlink($one_post['image']);
+		}
+
+		if($one_post['image'] != "" && file_exists($one_post['image']. "_post_thumb"))
+		{
+			unlink($one_post['image']. "_post_thumb");
+		}
+
+		if($one_post['image'] != "" && file_exists($one_post['image']. "_cover_thumb"))
+		{
+			unlink($one_post['image']. "_cover_thumb");
+		}
+
+		//delete all comments
+		$query = "delete from posts where parent = '$postid' ";
+		$DB->save($query);
+
+
+  
+	}
+
+	// public function i_own_post($postid,$mybook_userid)
+	// {
+
+	// 	if(!is_numeric($postid)){
+			
+	// 		return false;
+	// 	}
+
+	// 	$query = "select * from posts where postid = '$postid' limit 1";
+
+	// 	$DB = new Database();
+	// 	$result = $DB->read($query);
+  		
+  	// 	if(is_array($result)){
+
+  	// 		if($result[0]['userid'] == $mybook_userid){
+
+  	// 			return true;
+  	// 		}
+  	// 	}
+
+  	// 	return false;
+	// }
+
+	
+
+	public function i_own_post($postid,$mybook_userid)
+	{
+
+		if(!is_numeric($postid)){
+			
+			return false;
+		}
+
+		$query = "select * from posts where postid = '$postid' limit 1";
+
+		$DB = new Database();
+		$result = $DB->read($query);
+  		
+  		if(is_array($result)){
+
+  			if($result[0]['userid'] == $mybook_userid){
+
+  				return true;
+  			}	
+			  
+
+  		}
+		  
+
+  		return false;
+	}
+
+
+	public function get_likes($id,$type){
+
+		$DB = new Database();
+		$type = addslashes($type);
+
+		if(is_numeric($id)){
+ 
+			//get like details
+			$sql = "select likes from likes where type='$type' && contentid = '$id' limit 1";
+			$result = $DB->read($sql);
+			if(is_array($result)){
+
+				$likes = json_decode($result[0]['likes'],true);
+				return $likes;
+			}
+		}
+
+
+		return false;
+	}
+
+	public function like_post($id,$type,$mybook_userid){
+
+
+ 			$DB = new Database();
+ 			
+			//save likes details
+			$sql = "select likes from likes where type='$type' && contentid = '$id' limit 1";
+			$result = $DB->read($sql);
+			if(is_array($result)){
+
+				$likes = json_decode($result[0]['likes'],true);
+
+				$user_ids = array_column($likes, "userid");
+ 
+				if(!in_array($mybook_userid, $user_ids)){
+
+					$arr["userid"] = $mybook_userid;
+					$arr["date"] = date("Y-m-d H:i:s");
+
+					$likes[] = $arr;
+
+					$likes_string = json_encode($likes);
+					$sql = "update likes set likes = '$likes_string' where type='$type' && contqentid = '$id' limit 1";
+					$DB->save($sql);
+
+					//increment the right table
+					$sql = "update {$type}s set likes = likes + 1 where {$type}id = '$id' limit 1";
+					$DB->save($sql);
+
+					if($type != "user"){
+						$post = new Post();
+						$single_post = $post->get_one_post($id);
+
+						//add notification
+						add_notification($_SESSION['mybook_userid'],"like",$single_post);
+					}
+
+				}else{
+
+					$key = array_search($mybook_userid, $user_ids);
+					unset($likes[$key]);
+
+					$likes_string = json_encode($likes);
+					$sql = "update likes set likes = '$likes_string' where type='$type' && contentid = '$id' limit 1";
+					$DB->save($sql);
+
+					//increment the right table
+					$sql = "update {$type}s set likes = likes - 1 where {$type}id = '$id' limit 1";
+					$DB->save($sql);
+
+				}
+				
+
+			}else{
+
+				$arr["userid"] = $mybook_userid;
+				$arr["date"] = date("Y-m-d H:i:s");
+
+				$arr2[] = $arr;
+
+				$likes = json_encode($arr2);
+				$sql = "insert into likes (type,contentid,likes) values ('$type','$id','$likes')";
+				$DB->save($sql);
+
+				//increment the right table
+				$sql = "update {$type}s set likes = likes + 1 where {$type}id = '$id' limit 1";
+				$DB->save($sql);
+ 
+ 				if($type != "user"){
+	 				$post = new Post();
+					$single_post = $post->get_one_post($id);
+
+					//add notification
+					add_notification($_SESSION['mybook_userid'],"like",$single_post);
+				}
+			}
+
+	}
+
+
+	private function create_postid()
+	{
+
+		$length = rand(4,19);
+		$number = "";
+		for ($i=0; $i < $length; $i++) { 
+			# code...
+			$new_rand = rand(0,9);
+
+			$number = $number . $new_rand;
+		}
+
+		return $number;
+	}
+}
